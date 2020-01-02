@@ -1,0 +1,53 @@
+{
+  "name": "jkube-website",
+  "version": "0.0.0",
+  "description": "Website for Eclipse JKube project",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./public && gatsby build",
+    "develop": "gatsby develop --host=0.0.0.0",
+    "pretest": "eslint --ignore-path .gitignore .",
+    "start": "npm run develop",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkubeio/jkube-website.git"
+  },
+  "keywords": [
+    "jkube",
+    "eclipse",
+    "jshift",
+    "plugin"
+  ],
+  "author": "JKube Development Team",
+  "license": "EPL-2.0",
+  "bugs": {
+    "url": "https://github.com/jkubeio/jkube-website/issues"
+  },
+  "homepage": "https://github.com/jkubeio/jkube-website#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.17.0"
+  },
+  "dependencies": {
+    "gatsby": "^2.18.17",
+    "gatsby-plugin-i18n": "^1.0.1",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-sass": "^2.1.26",
+    "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-remark-autolink-headers": "^2.1.21",
+    "gatsby-remark-copy-linked-files": "^2.1.33",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-images": "^3.1.39",
+    "gatsby-remark-prismjs": "^3.3.28",
+    "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-transformer-remark": "^2.6.45",
+    "node-sass": "^4.13.0",
+    "prismjs": "^1.17.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  }
+}

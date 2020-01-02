@@ -1,0 +1,35 @@
+@import 'variables';
+
+html {
+  font-family: $base-font-family;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  background: $base-background-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-color;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3em;
+  font-weight: $font-weight-normal;
+}
+h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: $font-weight-normal;
+}
+
+a {
+  color: $color-link;
+  &:hover, &:focus {
+    color: $color-black;
+  }
+}
+

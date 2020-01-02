@@ -1,0 +1,13 @@
+@import '../base/variables';
+
+.eclipse-jkube__main {
+  margin: 0 $default-spacing;
+  & .eclipse-jkube__content {
+    .section-dark {
+      background-color: $color-dark-background;
+      color: $color-dark-foreground;
+      padding: $default-spacing;
+      margin: 0 #{-$default-spacing};
+    }
+  }
+}
