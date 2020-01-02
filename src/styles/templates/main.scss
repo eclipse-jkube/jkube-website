@@ -3,11 +3,40 @@
 .eclipse-jkube__main {
   margin: 0 $default-spacing;
   & .eclipse-jkube__content {
+    h2 {
+      font-family: 'Jura';
+    }
+    .hero {
+      display: block;
+      margin: 0 #{-$default-spacing};
+      padding: $default-spacing;
+      background-color: darken($color-dark-background, 10%);
+      color: $color-dark-foreground;
+    }
     .section-dark {
       background-color: $color-dark-background;
       color: $color-dark-foreground;
-      padding: $default-spacing;
       margin: 0 #{-$default-spacing};
+      padding: $default-spacing;
+    }
+    .section-features {
+      $feature-border: 1px solid darken($base-background-color, 15%);
+      h3, ul {
+        background-color: darken($base-background-color, 5%);
+      }
+      h3 {
+        margin: 0;
+        padding: $default-spacing $default-spacing/2;
+        border-top: $feature-border;
+      }
+      ul {
+        margin:0;
+        padding-top: 0;
+        padding-bottom: $default-spacing;
+        &:last-child {
+          border-bottom: $feature-border;
+        }
+      }
     }
   }
 }
