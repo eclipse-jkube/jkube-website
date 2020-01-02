@@ -4,41 +4,48 @@ date: "2020-01-02"
 title: "Eclipse JKube"
 description: "Eclipse JKube welcome page"
 ---
+<h1 class="hero">Eclipse JKube</h1>
+
 <div class="section-dark">
 
-# Eclipse JKube
-
-Eclipse Jkube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/Openshift
+Eclipse JKube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/Openshift
 manifests at compile time. It brings your Java applications on to Kubernetes and OpenShift.
 It provides a tight integration into Maven and benefits from the build configuration already provided.
 This project focus on two tasks: Building Docker images and creating Kubernetes and OpenShift resource descriptors.
 
 </div>
 
+<div class="section-features">
+
 ## Features
 
-* **JKube-kit**
-  * **Generator** framework for automatically generating Docker images by examining project information.
-  * **Enricher** framework for creating and enhancing Kubernetes/Openshift resource descriptors.
-  * **Profile** combining configuration for generators and enrichers.
-  * **Resource Configuration** model objects for a simplified configuration of Kubernetes/Openshift resource.
-  * **Image Configuration** model objects for modeling Docker image configuration.
-  
-* **Kubernetes Maven Plugin**
-  * Generates docker images with flexible and powerful configuration.
-  * Supports generating Kubernetes descriptors.
-  * Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.                 
-  * Provides **Inline Configuration** within the plugin configuration in an XML syntax.             
-  * Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.                  
-  
-* **Openshift Maven Plugin**        
-  * Dealing with S2I images and hence inherits its flexible and powerful configuration.         
-  * Supports generating Openshift descriptors.
-  * Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.                 
-  * Provides **Inline Configuration** within the plugin configuration in an XML syntax.             
-  * Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.   
+### JKube-kit
 
-<div class="section-dark">
+* **Generator** framework for automatically generating Docker images by examining project information.
+* **Enricher** framework for creating and enhancing Kubernetes/Openshift resource descriptors.
+* **Profile** combining configuration for generators and enrichers.
+* **Resource Configuration** model objects for a simplified configuration of Kubernetes/Openshift resource.
+* **Image Configuration** model objects for modeling Docker image configuration.
+
+### Kubernetes Maven Plugin
+
+* Generates docker images with flexible and powerful configuration.
+* Supports generating Kubernetes descriptors.
+* Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.
+* Provides **Inline Configuration** within the plugin configuration in an XML syntax.
+* Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.
+
+### Openshift Maven Plugin
+
+* Dealing with S2I images and hence inherits its flexible and powerful configuration.
+* Supports generating Openshift descriptors.
+* Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.
+* Provides **Inline Configuration** within the plugin configuration in an XML syntax.
+* Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.
+
+</div>
+
+---
 
 ## Getting started
 
@@ -51,7 +58,7 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 * Visit our <a href="https://github.com/eclipse/jkube/quickstarts">quickstarts samples</a> on github.
 
-</div>
+---
 
 ## Documentation
 
@@ -60,7 +67,7 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
   * <a href="./openshift-maven-plugin/doc/index.html">Openshift Maven Plugin</a>
 
 
-<div class="section-dark">
+---
 
 ## Getting Involved
 
@@ -69,4 +76,3 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 * Our mailing list: jkube-dev@eclipse.org
 * Reach out to us on <a href="https://gitter.im/eclipse/jkube#">Gitter</a>
 
-</div>
