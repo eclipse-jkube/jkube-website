@@ -4,9 +4,20 @@ date: "2020-01-02"
 title: "Eclipse JKube"
 description: "Eclipse JKube welcome page"
 ---
-<h1 class="hero">Eclipse JKube</h1>
+<div class="getting-involved">
 
-<div class="section-dark">
+[![Github](https://img.shields.io/github/stars/eclipse/jkube?style=social)](https://github.com/eclipse/jkube)
+[![Twitter](https://img.shields.io/twitter/follow/jkubeio?label=Follow)](https://twitter.com/jkubeio)
+[![License](https://img.shields.io/badge/License-EPL%202.0-red.svg?label=license&logo=eclipse)](https://www.eclipse.org/legal/epl-2.0/)
+[![Gitter](https://badges.gitter.im/eclipse/jkube.svg)](https://gitter.im/eclipse/jkube?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Eclipse Jkube Dev Mailing List](https://img.shields.io/badge/Eclipse%20Jkube%20-Developer%20Mailing%20List-orange)](mailto:jkube-dev@eclipse.org)
+
+</div>
+<div class="hero">
+
+<img src="./index/EF_GRY-OR_png.png" alt="Eclipse Foundation" class="hero__logo"/>
+
+# Eclipse JKube
 
 Eclipse JKube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/Openshift
 manifests at compile time. It brings your Java applications on to Kubernetes and OpenShift.
@@ -47,32 +58,43 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 ---
 
-## Getting started
+## View Demo
 
-* Check out our asciicasts for:
-  * <a href="https://asciinema.org/a/253747">Kubernetes Maven Plugin</a>
-    <img src="https://raw.githubusercontent.com/eclipse/jkube/kubernetes-maven-plugin/master/k8s-maven-plugin-demo.gif" alt="Sample Demo" />
-  * <a href="https://asciinema.org/a/253742">Openshift Maven Plugin</a>
-    <img src="https://raw.githubusercontent.com/eclipse/jkube/openshift-maven-plugin/master/oc-maven-plugin-demo.gif" alt="Sample Demo" />
+### <a href="https://asciinema.org/a/253747">Kubernetes Maven Plugin</a>
 
+<img src="./index/k8s-maven-plugin-demo.gif" alt="Sample Demo"/>
 
-* Visit our <a href="https://github.com/eclipse/jkube/quickstarts">quickstarts samples</a> on github.
+### <a href="https://asciinema.org/a/253742">Openshift Maven Plugin</a>
+
+<img src="./index/oc-maven-plugin-demo.gif" alt="Sample Demo"/>
+
+## Getting Started
+
+* Visit our <a href="https://github.com/eclipse/jkube/tree/master/quickstarts">quickstarts samples</a> on github.
 
 ---
+## Downloads
 
+You can get Eclipse Jkube from these platforms:
+
+* [![Maven Central](https://img.shields.io/maven-central/v/org.eclipse.jkube/jkube.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.eclipse.jkube%22%20AND%20a:%22jkube%22)
+* [![Eclipse Download Repository](https://img.shields.io/badge/eclipse%20downloads-downloads.eclipse.org-red)](https://download.eclipse.org/jkube/)
+
+---
 ## Documentation
 
-* Check out our documentation for for:
-  * <a href="./kubernetes-maven-plugin/doc/index.html">Kubernetes Maven Plugin</a>
-  * <a href="./openshift-maven-plugin/doc/index.html">Openshift Maven Plugin</a>
-
-
----
-
-## Getting Involved
-
-* Follow us on <a href="https://twitter.com/jkubeio">Twitter</a>
-* Contribute via bug fixes or issues on <a href="https://github.com/eclipse/jkube">Github</a>
-* Our mailing list: jkube-dev@eclipse.org
-* Reach out to us on <a href="https://gitter.im/eclipse/jkube#">Gitter</a>
+Check out our documentation for for:
+* **Kubernetes Maven Plugin** [![Documentation](https://img.shields.io/badge/plugin-documentation-lightgrey)](https://htmlpreview.github.io/?https://github.com/eclipse/jkube/blob/master/kubernetes-maven-plugin/doc/index.html)
+* **Openshift Maven Plugin** [![Documentation](https://img.shields.io/badge/plugin-documentation-lightgrey)](https://htmlpreview.github.io/?https://github.com/eclipse/jkube/blob/master/openshift-maven-plugin/doc/index.html)
+* **Jkube-kit**:
+  * **Generator** framework for automatically generating Docker images by examining project information.
+   [![Javadocs](http://www.javadoc.io/badge/org.eclipse.jkube/jkube-maven-generator-api.svg?color=blue)](http://www.javadoc.io/doc/org.eclipse.jkube/jkube-maven-generator-api)
+  * **Enricher** framework for creating and enhancing Kubernetes and OpenShift resources.
+   [![Javadocs](http://www.javadoc.io/badge/org.eclipse.jkube/jkube-maven-enricher-api.svg?color=blue)](http://www.javadoc.io/doc/org.eclipse.jkube/jkube-maven-enricher-api)
+  * **Profile** combining the configuration for generators and enrichers.
+   [![Javadocs](http://www.javadoc.io/badge/org.eclipse.jkube/jkube-maven-profiles.svg?color=blue)](http://www.javadoc.io/doc/org.eclipse.jkube/jkube-maven-profiles)
+  * **Resource configuration** model objects for a simplified configuration of Kubernetes and OpenShift resources.
+   [![Javadocs](http://www.javadoc.io/badge/org.eclipse.jkube/jkube-kit-config-resource.svg?color=blue)](http://www.javadoc.io/doc/org.eclipse.jkube/jkube-kit-config-resource)
+  * **Image configuration** model objects for modeling Docker image configuration as used in docker-maven-plugin.
+  [![Javadocs](http://www.javadoc.io/badge/org.eclipse.jkube/jkube-kit-config-image.svg?color=blue)](http://www.javadoc.io/doc/org.eclipse.jkube/jkube-kit-config-image)
 

@@ -38,6 +38,7 @@ const config = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              backgroundColor: 'transparent',
             },
           },
           {
