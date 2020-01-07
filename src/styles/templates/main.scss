@@ -3,8 +3,13 @@
 .eclipse-jkube__main {
   margin: 0 $default-spacing;
   & .eclipse-jkube__content {
-    h2 {
-      font-family: 'Jura';
+    .getting-involved {
+      background-color: darken($color-dark-background, 10%);
+      color: $color-dark-foreground;
+      margin: 0 #{-$default-spacing};
+      padding: $default-spacing;
+      display: flex;
+      justify-content: flex-end;
     }
     .hero {
       display: block;
