@@ -4,6 +4,7 @@ const config = {
     author: 'JKube Development Team',
     siteUrl: 'https://eclipse.org/jkube',
   },
+  pathPrefix: '/jkube',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',

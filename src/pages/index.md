@@ -15,7 +15,7 @@ description: "Eclipse JKube welcome page"
 </div>
 <div class="hero">
 
-<img src="./index/EF_GRY-OR_png.png" alt="Eclipse Foundation" class="hero__logo"/>
+![Eclipse Foundation](index/EF_GRY-OR_png.png)
 
 # Eclipse JKube
 
@@ -60,17 +60,17 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 ## View Demo
 
-### <a href="https://asciinema.org/a/253747">Kubernetes Maven Plugin</a>
+### [Kubernetes Maven Plugin](https://asciinema.org/a/253747)
 
-<img src="./index/k8s-maven-plugin-demo.gif" alt="Sample Demo"/>
+![k8s sample demo](index/k8s-maven-plugin-demo.gif)
 
-### <a href="https://asciinema.org/a/253742">Openshift Maven Plugin</a>
+### [Openshift Maven Plugin](https://asciinema.org/a/253742)
 
-<img src="./index/oc-maven-plugin-demo.gif" alt="Sample Demo"/>
+![oc sample demo](index/oc-maven-plugin-demo.gif)
 
 ## Getting Started
 
-* Visit our <a href="https://github.com/eclipse/jkube/tree/master/quickstarts">quickstarts samples</a> on github.
+* Visit our [quickstarts samples](https://github.com/eclipse/jkube/tree/master/quickstarts) on github.
 
 ---
 ## Downloads
