@@ -25,4 +25,11 @@ npm run build
 ```
 Website transpiled code will be output to: `./public`.
 
-In order to deploy the site copy this directory contents into an HTTP server
+In order to deploy the site copy this directory contents into an HTTP server.
+
+You can also use the provided `index.js` script to run a static web server and
+check that the build is ok.
+```
+./index.js
+xdg-open http://localhost:8000/jkube
+```

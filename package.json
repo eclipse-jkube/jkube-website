@@ -4,7 +4,7 @@
   "description": "Website for Eclipse JKube project",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf ./public && gatsby build",
+    "build": "rm -rf ./.cache ./public && gatsby build --prefix-paths",
     "develop": "gatsby develop --host=0.0.0.0",
     "pretest": "eslint --ignore-path .gitignore .",
     "start": "npm run develop",
