@@ -1,10 +1,10 @@
 const path = require('path');
+const {defaultLangKey} = require('./src/i18n');
 
-exports.createPages = async ({actions, graphql, reporter}) => {
-  const { createPage } = actions;
+const mainTemplate = path.resolve('src', 'templates', 'main.jsx');
+const docTemplate = path.resolve('src', 'templates', 'doc.jsx');
 
-  const mainTemplate = path.resolve('src', 'templates', 'main.jsx');
-
+const createMarkdownPages = async ({createPage, graphql, reporter}) => {
   const result = await graphql(`
     {
       allMarkdownRemark(
@@ -27,8 +27,8 @@ exports.createPages = async ({actions, graphql, reporter}) => {
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild('Error while running GraphQL query.');
-    return
+    reporter.panicOnBuild('Error while running GraphQL query for Markdown pages.');
+    return;
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
@@ -41,4 +41,45 @@ exports.createPages = async ({actions, graphql, reporter}) => {
       },
     })
   })
+};
+
+const createAsciiDocPages = async({createPage, graphql, reporter}) => {
+  const result = await graphql(`
+    {
+      allAsciidoc {
+        edges {
+          node {
+            id
+            document {
+              title
+              subtitle
+              main
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) {
+    reporter.panicOnBuild('Error while running GraphQL query for Asciidoc pages.');
+    return;
+  }
+  result.data.allAsciidoc.edges.forEach(({ node }) => {
+    const slug = `/docs/${node.document.title.replace(/(.*\/)?/, '')}`;
+    createPage({
+      path: slug,
+      component: docTemplate,
+      context: {
+        id: node.id,
+        langKey: defaultLangKey,
+      },
+    })
+  })
+};
+
+exports.createPages = async ({actions, graphql, reporter}) => {
+  const { createPage } = actions;
+  await createMarkdownPages({createPage, graphql, reporter});
+  await createAsciiDocPages({createPage, graphql, reporter});
 };

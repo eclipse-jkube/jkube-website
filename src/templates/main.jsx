@@ -1,22 +1,30 @@
-import React from "react";
-import {graphql} from "gatsby"
-import Seo from "../components/seo";
+import React from 'react';
+import {graphql} from 'gatsby';
+import Footer from '../components/footer'
+import Header from '../components/header';
+import Seo from '../components/seo';
 import '../styles/main.scss';
 
-const Main = ({data: {
-  markdownRemark: {
-    frontmatter: {title, description},
-    html: __html
+const Main = ({
+  data: {
+    markdownRemark: {
+      frontmatter: {title, description},
+      html: __html
+    }
   },
-  langKey
-}}) => {
+  pageContext: {langKey}
+}) => {
   return (
-    <div className="eclipse-jkube__main">
+    <div className='eclipse-jkube'>
       <Seo title={title} description={description} lang={langKey}/>
-      <div
-        className="eclipse-jkube__content"
-        dangerouslySetInnerHTML={{__html}}
-      />
+      <Header lang={langKey}/>
+      <div className='eclipse-jkube__main'>
+        <div
+          className='eclipse-jkube__content'
+          dangerouslySetInnerHTML={{__html}}
+        />
+      </div>
+      <Footer/>
     </div>
   );
 };

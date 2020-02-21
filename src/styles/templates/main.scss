@@ -1,50 +1,109 @@
 @import '../base/variables';
 
+@mixin full-width() {
+  margin: 0px -#{$default-spacing} $default-spacing -#{$default-spacing};
+  @media all and (min-width: $desktop-max-width) {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw
+  }
+}
+
+.eclipse-jkube {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .eclipse-jkube__main {
-  margin: 0 $default-spacing;
+  flex: 1;
+  @media all and (min-width: $desktop-max-width) {
+    // Required by hero component: when there's a vertical scroll bar this extra width makes the horizontal scroll bar appear
+    overflow-x: hidden;
+  }
   & .eclipse-jkube__content {
-    .getting-involved {
-      background-color: darken($color-dark-background, 10%);
-      color: $color-dark-foreground;
-      margin: 0 #{-$default-spacing};
-      padding: $default-spacing;
-      display: flex;
-      justify-content: flex-end;
-    }
-    .hero {
-      display: block;
-      margin: 0 #{-$default-spacing};
-      padding: $default-spacing;
-      background-color: darken($color-dark-background, 10%);
-      color: $color-dark-foreground;
-    }
-    .section-dark {
-      background-color: $color-dark-background;
-      color: $color-dark-foreground;
-      margin: 0 #{-$default-spacing};
-      padding: $default-spacing;
-    }
-    .section-features {
-      $feature-border: 1px solid darken($base-background-color, 15%);
-      h3, ul {
-        background-color: darken($base-background-color, 5%);
-      }
-      h3 {
-        margin: 0;
-        padding: $default-spacing $default-spacing/2;
-        border-top: $feature-border;
-      }
-      ul {
-        margin:0;
-        padding-top: 0;
-        padding-bottom: $default-spacing;
-        &:last-child {
-          border-bottom: $feature-border;
-        }
-      }
+    margin: 0 $default-spacing;
+    @media all and (min-width: $desktop-max-width) {
+      max-width: $desktop-max-width - $default-spacing;
+      margin: 0 auto;
     }
     img {
       max-width: 100%;
     }
+    .hero {
+      @include full-width;
+      display: block;
+      background-color: darken($color-dark-background, 10%);
+      background-image: url('../assets/cubes.jpg');
+      background-size: cover;
+      color: $color-dark-foreground;
+      & .hero-content {
+        padding: $default-spacing;
+        @media all and (min-width: $desktop-max-width) {
+          padding: $default-spacing calc((100% - #{$desktop-max-width})/2);
+        }
+        background-color: transparentize(darken($color-dark-background, 10%), 0.3);
+        .getting-involved {
+          color: $color-dark-foreground;
+          margin: 0 #{-$default-spacing};
+          padding: 0 $default-spacing;
+          display: flex;
+          justify-content: flex-end;
+        }
+        h1 {
+          font-size: 2.5rem;
+          font-family: $base-font-family;
+          font-weight: $font-weight-light-bold;
+        }
+      }
+    }
+    .section-dark {
+      @include full-width;
+      background-color: $color-dark-background;
+      color: $color-dark-foreground;
+      margin: 0 #{-$default-spacing};
+      padding: $default-spacing;
+      @media all and (min-width: $desktop-max-width) {
+        padding: $default-spacing calc((100% - #{$desktop-max-width})/2);
+      }
+      > * {
+        @media all and (min-width: $desktop-max-width) {
+          padding: 0 calc((100% - #{$desktop-max-width})/2);
+        }
+      }
+    }
+    & .highlight {
+      display: flex;
+      align-items: center;
+      > p {
+        margin-right: $default-spacing * 2;
+        display: none;
+        @media all and (min-width: $desktop-min-width){
+          display:block;
+        }
+        img {
+          max-width: 100px;
+        }
+      }
+      &-description {
+        flex: 1;
+        min-width: 1px;
+      }
+      ul {
+        flex: 1;
+        min-width: 1px;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        margin: $default-spacing 0;
+      }
+    }
+  }
+  :not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background-color: transparent;
   }
 }

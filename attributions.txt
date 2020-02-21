@@ -1,0 +1,4 @@
+src/assets/cubes.jpg - Photo by Christian Fregnan on Unsplash - https://unsplash.com/photos/TAVKURx-xLw
+src/pages/index/kubernetes-logo.svg - https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg
+src/pages/index/openshift-logo.svg - https://commons.wikimedia.org/wiki/File:OpenShift-LogoType.svg
+src/pages/index/briefcase-icon.svg - https://en.wikipedia.org/wiki/File:Suitcase_icon.svg
