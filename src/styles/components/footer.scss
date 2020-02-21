@@ -1,0 +1,12 @@
+@import '../base/variables';
+
+.eclipse-jkube__footer {
+  padding: $default-spacing;
+  border-top: 10px solid $color-black;
+  background-color: $footer-background;
+
+  & .eclipse-jkube__footer-copyright {
+    font-family: "Roboto", sans-serif;
+    color: $color-light-gray;
+  }
+}

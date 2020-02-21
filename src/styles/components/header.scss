@@ -1,0 +1,74 @@
+@import '../base/variables';
+
+$logo-width: 150px;
+$logo-width-desktop: 180px;
+.eclipse-jkube__header {
+  $header-class: &;
+  display: block;
+  position: relative;
+  height: $header-height;
+  @media all and (min-width: $desktop-min-width ) {
+    height: $header-height-desktop;
+  }
+  background-color: $header-background;
+  & #{$header-class}-container {
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    max-width: $desktop-max-width;
+    @media all and (min-width: $desktop-min-width ) {
+      display: flex;
+      flex-wrap: nowrap;
+      height: $header-height-desktop;
+    }
+    padding: 0 $default-spacing;
+  }
+
+  & #{$header-class}-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $header-logo-height;
+    font-size: 36px;
+    font-weight: $header-logo-font-weight;
+    color: $color-white;
+    @media all and (min-width: $desktop-min-width ) {
+      font-size: 50px;
+    }
+    &-image {
+      height: $header-logo-height;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+  & #{$header-class}-content {
+    flex: 1 0;
+    min-width: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: $desktop-min-width ) {
+      justify-content: flex-end;
+    }
+    li {
+      display: inline-block;
+      padding-right: $default-spacing;
+      list-style: none;
+      color: $color-white;
+      font-size: $header-links-font-size;
+    }
+    & #{$header-class}-stars {
+      width: 85px;
+    }
+  }
+  a {
+    color: $color-white;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $color-orange;
+    transition: color 300ms;
+  }
+}

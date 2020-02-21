@@ -1,3 +1,5 @@
+const {defaultLangKey} = require('./src/i18n');
+
 const config = {
   siteMetadata: {
     title: 'Eclipse JKube',
@@ -10,14 +12,31 @@ const config = {
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `markdown-pages`,
+        name: 'markdown-pages',
         path: `${__dirname}/src/pages`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-source-git',
+      options: {
+        name: 'jkube',
+        remote: 'https://github.com/eclipse/jkube.git',
+        patterns: [
+          'kubernetes-maven-plugin/doc/**/index.adoc',
+          'openshift-maven-plugin/doc/**/index.adoc'
+        ]
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-asciidoc',
+      options: {
+        safe: 'unsafe'
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           'gatsby-remark-autolink-headers',
@@ -25,7 +44,7 @@ const config = {
           {
             resolve: 'gatsby-plugin-i18n',
             options: {
-              langKeyDefault: 'en',
+              langKeyDefault: defaultLangKey,
               useLangKeyLayout: false,
             },
           },

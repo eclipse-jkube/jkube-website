@@ -1,0 +1,38 @@
+@import '../base/variables';
+@import '../asciidoctor/asciidoctor';
+
+$toc-breakpoint: 768px;
+$toc-width: 20em;
+
+.eclipse-jkube__documentation {
+  margin: 0;
+  @media screen and (min-width: $toc-breakpoint) {
+    position: absolute;
+    top: $header-height-desktop;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+  }
+  & .eclipse-jkube__documentation-content {
+    @include asciidoctor;
+    position: relative;
+    padding: $default-spacing;
+    overflow: hidden;
+    @media screen and (min-width: $toc-breakpoint) {
+      padding-left: $toc-width + 1em;
+      .toc {
+        position: fixed;
+        width: $toc-width;
+        left: 0;
+        top: $header-height-desktop;
+        bottom: 0;
+        z-index: 1000;
+        padding: 0 $default-spacing;
+        border-right: 1px solid #efefed;
+        border-top-width: 0!important;
+        border-bottom-width: 0!important;
+        overflow: auto;
+      }
+    }
+  }
+}

@@ -1,15 +1,32 @@
 $default-spacing: 16px;
-$font-weight-normal: 300;
+$desktop-min-width: 501px;
+$desktop-max-width: 1170px;
 
+$font-weight-normal: 300;
+$font-weight-light-bold: 400;
+
+$color-white: #F1F2F2;
 $color-black: #222222;
+$color-orange: #DD8623;
 $color-light-gray: #939598;
 $color-link: #525C86;
 $color-gray: #666666;
+$color-dark-gray: #292C2F;
 $color-dark-background: #404040;
-$color-dark-foreground: white;
+$color-dark-foreground: $color-white;
 
-$base-background-color: white;
+$base-background-color: $color-white;
 $base-color: $color-black;
 $base-font-size: 16px;
 $base-font-weight: $font-weight-normal;
 $base-font-family: 'Libre Franklin','Roboto', sans-serif;
+
+$header-height: 150px;
+$header-height-desktop: 105px;
+$header-background: $color-dark-gray;
+$header-logo-height: 90px;
+$header-logo-font-weight: 400;
+$header-links-font-size: 20px;
+
+$footer-background: $color-dark-gray;
+$footer-border-color: $color-black;

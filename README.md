@@ -33,3 +33,8 @@ check that the build is ok.
 ./index.js
 xdg-open http://localhost:8000/jkube
 ```
+
+
+## Documentation generation
+
+Documentation gets **statically** generated from https://github.com/eclipse/jkube asciidoc.
