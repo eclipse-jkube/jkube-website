@@ -29,9 +29,9 @@ function build() {
 
 function deploy() {
   cp -avr "$WEB_DIR/public/"* "$ECLIPSE_REPO_DIR"
-  git --git-dir "$ECLIPSE_REPO_DIR/.git" add .
-  git --git-dir "$ECLIPSE_REPO_DIR/.git" commit -m "CI: Website updated"
-  git --git-dir "$ECLIPSE_REPO_DIR/.git" push origin master
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" add "$ECLIPSE_REPO_DIR"
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated"
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" push origin master
 }
 
 function error() {
