@@ -32,6 +32,9 @@
     img {
       max-width: 100%;
     }
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+      background-color: transparent;
+    }
     .hero {
       @include full-width;
       display: block;
@@ -78,7 +81,7 @@
       display: flex;
       align-items: center;
       > p {
-        margin-right: $default-spacing * 2;
+        margin: $default-spacing ($default-spacing * 2);
         display: none;
         @media all and (min-width: $desktop-min-width){
           display:block;
@@ -102,8 +105,25 @@
         margin: $default-spacing 0;
       }
     }
-  }
-  :not(pre) > code[class*="language-"], pre[class*="language-"] {
-    background-color: transparent;
+    & .calendar {
+      $calendar-aspect-ratio: 75;
+      $calendar-max-height: 500px;
+      $calendar-width-break: $calendar-max-height / ($calendar-aspect-ratio / 100);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: $calendar-aspect-ratio * 1%;
+      margin-bottom: $default-spacing;
+      @media all and (min-width: $calendar-width-break) {
+        padding-bottom: 0;
+        height: $calendar-max-height;
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        max-height: $calendar-max-height;
+        width: 100%;
+      }
+    }
   }
 }

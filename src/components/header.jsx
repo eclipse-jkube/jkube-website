@@ -15,16 +15,20 @@ const Header = ({lang}) => {
         </Link>
         <div className='eclipse-jkube__header-content'>
           <ul>
-            <li><Link to={resolvePath('/demos')}>Demos</Link></li>
             <li><Link to={resolvePath('/docs')}>Docs</Link></li>
+            <li><Link to={resolvePath('/demos')}>Demos</Link></li>
+            <li><Link to={resolvePath('/community')}>Community</Link></li>
+            <li><Link to={resolvePath('/contributing')}>Contributing</Link></li>
+            <li>
+              <a
+                className='eclipse-jkube__header-stars'
+                href='https://github.com/eclipse/jkube' title='eclipse/jkube'
+                target='_blank' rel='nofollow noopener noreferrer'
+              >
+                <img src='https://img.shields.io/github/stars/eclipse/jkube?style=social' alt='eclipse/jkube stargazers' />
+              </a>
+            </li>
           </ul>
-          <a
-            className='eclipse-jkube__header-stars'
-            href='https://github.com/eclipse/jkube' title='eclipse/jkube'
-            target='_blank' rel='nofollow noopener noreferrer'
-          >
-            <img src='https://img.shields.io/github/stars/eclipse/jkube?style=social' alt='eclipse/jkube stargazers' />
-          </a>
         </div>
       </div>
     </header>
