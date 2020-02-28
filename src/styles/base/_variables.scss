@@ -21,10 +21,12 @@ $base-font-size: 16px;
 $base-font-weight: $font-weight-normal;
 $base-font-family: 'Libre Franklin','Roboto', sans-serif;
 
-$header-height: 150px;
+$header-single-row-min-width: 700px;
+$header-height: 175px;
 $header-height-desktop: 105px;
 $header-background: $color-dark-gray;
-$header-logo-height: 90px;
+$header-logo-height: 65px;
+$header-logo-height-desktop: 90px;
 $header-logo-font-weight: 400;
 $header-links-font-size: 20px;
 

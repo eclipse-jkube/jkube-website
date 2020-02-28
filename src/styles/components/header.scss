@@ -7,29 +7,28 @@ $logo-width-desktop: 180px;
   display: block;
   position: relative;
   height: $header-height;
-  @media all and (min-width: $desktop-min-width ) {
+  @media all and (min-width: $header-single-row-min-width ) {
     height: $header-height-desktop;
   }
   background-color: $header-background;
   & #{$header-class}-container {
     position: relative;
     margin: 0 auto;
+    padding: 0 $default-spacing;
     height: 100%;
     max-width: $desktop-max-width;
-    @media all and (min-width: $desktop-min-width ) {
+    @media all and (min-width: $header-single-row-min-width ) {
       display: flex;
       flex-wrap: nowrap;
       height: $header-height-desktop;
     }
-    padding: 0 $default-spacing;
   }
 
   & #{$header-class}-logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: $header-logo-height;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: $header-logo-font-weight;
     color: $color-white;
     @media all and (min-width: $desktop-min-width ) {
@@ -37,6 +36,9 @@ $logo-width-desktop: 180px;
     }
     &-image {
       height: $header-logo-height;
+      @media all and (min-width: $desktop-min-width ) {
+        height: $header-logo-height-desktop;
+      }
       img {
         max-height: 100%;
         max-width: 100%;
@@ -52,15 +54,27 @@ $logo-width-desktop: 180px;
     @media all and (min-width: $desktop-min-width ) {
       justify-content: flex-end;
     }
-    li {
-      display: inline-block;
-      padding-right: $default-spacing;
-      list-style: none;
-      color: $color-white;
-      font-size: $header-links-font-size;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      @media all and (min-width: $header-single-row-min-width ) {
+        justify-content: flex-start;
+      }
+      li {
+        margin: ($default-spacing / 4) 0;
+        padding-right: $default-spacing;
+        list-style: none;
+        color: $color-white;
+        font-size: $header-links-font-size;
+      }
     }
     & #{$header-class}-stars {
+      display: block;
       width: 85px;
+      height: 20px;
+      line-height: 20px;
     }
   }
   a {

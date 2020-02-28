@@ -12,7 +12,7 @@ description: "Página de bienvenida de JKube"
 [![Twitter](https://img.shields.io/twitter/follow/jkubeio?label=Follow)](https://twitter.com/jkubeio)
 [![License](https://img.shields.io/badge/License-EPL%202.0-red.svg?label=license&logo=eclipse)](https://www.eclipse.org/legal/epl-2.0/)
 [![Gitter](https://badges.gitter.im/eclipse/jkube.svg)](https://gitter.im/eclipse/jkube?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Eclipse Jkube Dev Mailing List](https://img.shields.io/badge/Eclipse%20Jkube%20-Developer%20Mailing%20List-orange)](mailto:jkube-dev@eclipse.org)
+[![Eclipse JKube Dev Mailing List](https://img.shields.io/badge/Eclipse%20JKube%20-Developer%20Mailing%20List-orange)](https://accounts.eclipse.org/mailing-list/jkube-dev)
 
 </div>
 
