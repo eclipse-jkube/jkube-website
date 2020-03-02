@@ -53,11 +53,11 @@ Check our team's plans in Eclipse JKube's [projects](https://github.com/eclipse/
 ### Team Calendar
 
 Stay tuned to our
-[public calendar](https://calendar.google.com/calendar/embed?src=redhat.com_8694744rpg110kbuvgv9623mqo%40group.calendar.google.com&ctz=Europe%2FMadrid)
+[public calendar](https://calendar.google.com/calendar/embed?src=n38b3vf86tupe7ennn65ntmchk%40group.calendar.google.com&ctz=Europe%2FMadrid)
 to see when our next Sprint planning or meeting happens and feel free to join.
 
 <div class="calendar">
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23F1F2F2&amp;ctz=Europe%2FMadrid&amp;src=cmVkaGF0LmNvbV84Njk0NzQ0cnBnMTEwa2J1dmd2OTYyM21xb0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%237CB342&amp;showTitle=0" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23F1F2F2&amp;ctz=Etc%2FGMT&amp;src=n38b3vf86tupe7ennn65ntmchk%40group.calendar.google.com&amp;color=%237CB342&amp;showTitle=0" style="border-width:0" frameborder="0" scrolling="no"></iframe>
 
 </div>
