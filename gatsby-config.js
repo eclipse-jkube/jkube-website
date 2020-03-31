@@ -1,9 +1,12 @@
 const {defaultLangKey} = require('./src/i18n');
+const {readLatestVersion} = require('./src/jkube-utils');
+
+const latestJKubeVersion = readLatestVersion();
 
 const config = {
   siteMetadata: {
     title: 'Eclipse JKube',
-    author: 'JKube Development Team',
+    author: 'Eclipse JKube Development Team',
     siteUrl: 'https://eclipse.org/jkube',
   },
   pathPrefix: '/jkube',
@@ -23,6 +26,7 @@ const config = {
       options: {
         name: 'jkube',
         remote: 'https://github.com/eclipse/jkube.git',
+        branch: `v${latestJKubeVersion}`,
         patterns: [
           'kubernetes-maven-plugin/doc/**/index.adoc',
           'openshift-maven-plugin/doc/**/index.adoc'
@@ -32,7 +36,10 @@ const config = {
     {
       resolve: 'gatsby-transformer-asciidoc',
       options: {
-        safe: 'unsafe'
+        safe: 'unsafe',
+        attributes: {
+          version: latestJKubeVersion
+        }
       }
     },
     {
