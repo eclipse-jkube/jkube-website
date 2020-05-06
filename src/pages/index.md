@@ -78,7 +78,9 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 You can get Eclipse JKube from these platforms:
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.eclipse.jkube/jkube.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22org.eclipse.jkube%22%20AND%20a:%22jkube%22)
-[![Eclipse Download Repository](https://img.shields.io/badge/eclipse%20downloads-downloads.eclipse.org-red)](https://download.eclipse.org/jkube/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.eclipse.jkube/jkube.svg?label=Maven%20Central)
+](https://search.maven.org/search?q=g:%22org.eclipse.jkube%22)
+[![Eclipse Download Repository](https://img.shields.io/badge/eclipse%20downloads-downloads.eclipse.org-red)
+](https://download.eclipse.org/jkube/)
 
 </div>

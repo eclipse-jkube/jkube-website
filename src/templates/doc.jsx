@@ -15,7 +15,7 @@ const componentDidMount = () => {
 
 const Doc = ({
   data: {
-    asciidoc: {
+    asciidocCopy: {
       document: {
         title,
         subtitle
@@ -43,7 +43,7 @@ const Doc = ({
 
 export const pageQuery = graphql`
   query($id: String!) {
-    asciidoc(id: { eq: $id }) {
+    asciidocCopy(id: { eq: $id }) {
       html
       document {
         title
