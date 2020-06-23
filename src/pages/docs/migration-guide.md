@@ -15,179 +15,66 @@ description: "Eclipse JKube migration guide from Fabric8 Maven Plugin (FMP)"
 ## Migration Guide for projects using Fabric8 Maven Plugin to Eclipse JKube
 
 For any project currently using [Fabric8 Maven Plugin (FMP)](https://github.com/fabric8io/fabric8-maven-plugin),
-migrating to Eclipse JKube should not be that hard.
+migrating to Eclipse JKube is as simple as running a Maven command.
 
-FMP used to handle both Kubernetes and Openshift clusters but Eclipse JKube has separate plugins for these two different
+FMP used to handle both Kubernetes and OpenShift clusters but Eclipse JKube has separate plugins for these two different
 environments.
 
 ### Projects targeting Kubernetes Clusters
 
-#### Zero Configuration
+Run the following command in you project's root directory:
 
-For any project deploying their applications onto Kubernetes we need proceed
-[Fabric8 Maven Plugin](https://github.com/fabric8io/fabric8-maven-plugin) with Eclipse JKube 
-just replacing `groupId` and `artifactId` like this:
-
-##### FMP zero configuration mode
-```xml
-<plugin>
-    <groupId>io.fabric8</groupId>
-    <artifactId>fabric8-maven-plugin</artifactId>
-    <version>4.4.0</version>
-</plugin>
+```shell script
+mvn org.eclipse.jkube:kubernetes-maven-plugin:migrate
 ```
 
-##### Eclipse JKube zero configuration mode
-```xml
-<plugin>
-    <groupId>org.eclipse.jkube</groupId>
-    <artifactId>k8s-maven-plugin</artifactId>
-    <version>0.1.1</version>
-</plugin>
+Maven coordinates in your `pom.xml` will change from `io.fabric8:fabric8-maven-plugin` to 
+`org.eclipse.jkube:kubernetes-maven-plugin` for every `<plugin>` entry.
+
+### Projects targeting OpenShift Clusters
+
+Run the following command in you project's root directory:
+
+```shell script
+mvn org.eclipse.jkube:openshift-maven-plugin:migrate
 ```
 
-#### XML Configuration
+Maven coordinates in your `pom.xml` will change from `io.fabric8:fabric8-maven-plugin` to 
+`org.eclipse.jkube:openshift-maven-plugin` for every `<plugin>` entry.
 
-In cases where XML configuration is used for enrichers and generators. All the enrichers with prefixes `fmp` or `f8`
-are replaced with `jkube`. Let's have a look at this example:
+### XML configuration and Maven properties
 
-##### FMP configuration for enrichers, generators and resources
-```xml
-<plugin>
-    <groupId>io.fabric8</groupId>
-    <artifactId>fabric8-maven-plugin</artifactId>
-    <version>4.4.0</version>
-    <configuration>
-        <resources>
-            <labels>
-                <all>
-                    <testProject>spring-boot-sample</testProject>
-                </all>
-            </labels>
-        </resources>
+FMP specific Maven properties `<fabric8.*` will be automatically renamed to Eclipse JKube analogous
+properties `<jkube.*`.
 
-        <generator>
-            <includes>
-                <include>spring-boot</include>
-            </includes>
-            <config>
-                <spring-boot>
-                    <color>always</color>
-                </spring-boot>
-            </config>
-        </generator>
-        <enricher>
-            <excludes>
-                <exclude>f8-expose</exclude>
-            </excludes>
-            <config>
-                <fmp-service>
-                    <type>NodePort</type>
-                </fmp-service>
-            </config>
-        </enricher>
-    </configuration>
+Mojo XML configuration element tag names will also be automatically renamed to the Eclipse JKube
+equivalent.
 
-    <executions>
-        <execution>
-            <goals>
-                <goal>resource</goal>
-                <goal>build</goal>
-                <goal>helm</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
-
-##### Eclipse JKube configuration for enrichers, generators and resources
-
-```xml
-<plugin>
-    <groupId>org.eclipse.jkube</groupId>
-    <artifactId>k8s-maven-plugin</artifactId>
-    <version>0.1.1</version>
-
-    <configuration>
-        <resources>
-            <labels>
-                <all>
-                    <testProject>spring-boot-sample</testProject>
-                </all>
-            </labels>
-        </resources>
-        <generator>
-            <includes>
-                <include>spring-boot</include>
-            </includes>
-            <config>
-                <spring-boot>
-                    <color>always</color>
-                </spring-boot>
-            </config>
-        </generator>
-        <enricher>
-            <excludes>
-                <exclude>jkube-expose</exclude>
-            </excludes>
-            <config>
-                <jkube-service>
-                    <type>NodePort</type>
-                </jkube-service>
-            </config>
-        </enricher>
-    </configuration>
-
-    <executions>
-        <execution>
-            <goals>
-                <goal>resource</goal>
-                <goal>build</goal>
-                <goal>helm</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-```
-
-#### Resource Fragment configuration
+### Resource Fragments
 
 If you want to customize Kubernetes manifests added by FMP by means other than XML configuration,
-you usually add your resources to `src/main/fabric8` directory and FMP picks these up during enrichment process and
-merges them along with the default generated resources.
+you usually add your resources to `src/main/fabric8` directory and FMP picks these up during enrichment
+process and merges them along with the default generated resources.
 
-For Eclipse JKube it's the same, only the `src/main/fabric8` directory is replaced with`src/main/jkube` directory:
+Eclipse JKube's `migrate` Maven goal will also take care of renaming your project's `src/main/fabric8`
+fragment directory to `src/main/jkube`
 
-##### FMP fragment configuration
-
-```bash
-[~/work/repos/fabric8-maven-plugin/samples/external-resources]$ ls src/main/fabric8/
-deployment.yml  sa.yml  service.yml
-```
-
-##### Eclipse JKube fragment configuration
-
-```bash
-[~/work/repos/jkube/quickstarts/maven/external-resources]$ ls src/main/jkube/
-deployment.yml  sa.yml  service.yml
-```
-#### Image Configuration for Docker builds
+### Image Configuration for Docker builds
 
 Projects relying on FMP's `ImageConfiguration` model for building docker images don't need any change in
 Eclipse JKube's XML configuration.
 
 For example, let's consider this simple project's plugin configuration:
 
-##### FMP Image Configuration
+##### Fabric8 Maven Plugin Image Configuration
 ```xml
 <plugin>
   <groupId>io.fabric8</groupId>
   <artifactId>fabric8-maven-plugin</artifactId>
-  <version>4.4.0</version>
   <configuration>
     <images>
       <image>
-        <name>rohankanojia/helloworld-java:${project.version}</name>
+        <name>%g/helloworld-java:%l</name>
         <alias>hello-world</alias>
         <build>
           <from>openjdk:latest</from>
@@ -211,12 +98,11 @@ For example, let's consider this simple project's plugin configuration:
 ```xml
 <plugin>
   <groupId>org.eclipse.jkube</groupId>
-  <artifactId>k8s-maven-plugin</artifactId>
-  <version>0.1.1</version>
+  <artifactId>kubernetes-maven-plugin</artifactId>
   <configuration>
     <images>
       <image>
-        <name>rohankanojia/helloworld-java:${project.version}</name>
+        <name>%g/helloworld-java:%l</name>
         <alias>hello-world</alias>
         <build>
           <from>openjdk:latest</from>
@@ -235,34 +121,3 @@ For example, let's consider this simple project's plugin configuration:
   </configuration>
 </plugin>
 ```
-
-### Projects targeting OpenShift Clusters
-
-#### Zero Configuration
-
-For any project deploying their applications onto Kubernetes we need proceed
-[Fabric8 Maven Plugin](https://github.com/fabric8io/fabric8-maven-plugin) with Eclipse JKube 
-just replacing `groupId` and `artifactId` like this:
-
-##### FMP zero configuration mode
-```xml
-<plugin>
-    <groupId>io.fabric8</groupId>
-    <artifactId>fabric8-maven-plugin</artifactId>
-    <version>4.4.0</version>
-</plugin>
-```
-
-##### Eclipse JKube zero configuration mode
-```xml
-<plugin>
-    <groupId>org.eclipse.jkube</groupId>
-    <artifactId>oc-maven-plugin</artifactId>
-    <version>0.1.1</version>
-</plugin>
-```
-
-#### XML and Resource Fragment configuration
-
-For [XML](#xml-configuration) and [Resource Fragment](#resource-fragment-configuration) configurations,
-sames rules as for Kubernetes Maven Plugin apply.

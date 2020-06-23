@@ -20,7 +20,7 @@ available examples for your favourite framework or vanilla Java.
 ## Plugin Documentation
 
 * [Kubernetes Maven Plugin](/docs/kubernetes-maven-plugin)
-* [Openshift Maven Plugin](/docs/openshift-maven-plugin)
+* [OpenShift Maven Plugin](/docs/openshift-maven-plugin)
 * [Migration Guide](/docs/migration-guide)
 
 ## Javadoc
