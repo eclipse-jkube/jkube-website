@@ -12,10 +12,10 @@ description: "Eclipse JKube Demonstrations and quick start for Kubernetes and Op
 </div>
 </div>
 
-### [Kubernetes Maven Plugin](https://asciinema.org/a/253747)
+### [Kubernetes Maven Plugin](/docs/kubernetes-maven-plugin)
 
-![k8s sample demo](k8s-maven-plugin-demo.gif)
+[![Kubernetes Maven Plugin](https://asciinema.org/a/335724.svg)](https://asciinema.org/a/335724)
 
-### [Openshift Maven Plugin](https://asciinema.org/a/253742)
+### [OpenShift Maven Plugin](/docs/openshift-maven-plugin)
 
-![oc sample demo](oc-maven-plugin-demo.gif)
+[![OpenShift Maven Plugin](https://asciinema.org/a/335743.svg)](https://asciinema.org/a/335743)

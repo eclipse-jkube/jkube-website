@@ -1,8 +1,8 @@
 ---
 path: "/"
 date: "2020-01-02"
-title: "Eclipse JKube"
-description: "Eclipse JKube welcome page"
+title: "Eclipse JKube - Successor of the deprecated Fabric8 Maven Plugin"
+description: "Eclipse - Successor of the deprecated Fabric8 Maven Plugin"
 ---
 <div class="hero">
 <div class="hero-content">
@@ -18,7 +18,7 @@ description: "Eclipse JKube welcome page"
 
 # Eclipse JKube
 
-Eclipse JKube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/Openshift
+Eclipse JKube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/OpenShift
 manifests at compile time. It brings your Java applications on to Kubernetes and OpenShift.
 
 It provides a tight integration into Maven and benefits from the build configuration already provided.
@@ -37,9 +37,9 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 ![JKube Kit](index/briefcase-icon.svg "JKube Kit")
 
 * **Generator** framework for automatically generating Docker images by examining project information.
-* **Enricher** framework for creating and enhancing Kubernetes/Openshift resource descriptors.
+* **Enricher** framework for creating and enhancing Kubernetes/OpenShift resource descriptors.
 * **Profile** combining configuration for generators and enrichers.
-* **Resource Configuration** model objects for a simplified configuration of Kubernetes/Openshift resource.
+* **Resource Configuration** model objects for a simplified configuration of Kubernetes/OpenShift resource.
 * **Image Configuration** model objects for modeling Docker image configuration.
 
 </div>
@@ -58,14 +58,14 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 </div>
 
-### Openshift Maven Plugin
+### OpenShift Maven Plugin
 
 <div class="highlight">
 
 ![JKube Kit](index/openshift-logo.svg "JKube Kit")
 
 * Dealing with S2I images and hence inherits its flexible and powerful configuration.
-* Supports generating Openshift descriptors.
+* Supports generating OpenShift descriptors.
 * Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.
 * Provides **Inline Configuration** within the plugin configuration in an XML syntax.
 * Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.
