@@ -18,43 +18,32 @@ description: "Eclipse - Successor of the deprecated Fabric8 Maven Plugin"
 
 # Eclipse JKube
 
-Eclipse JKube is a collection of plugins and libraries that are used for generating and deploying Kubernetes/OpenShift
-manifests at compile time. It brings your Java applications on to Kubernetes and OpenShift.
+## Cloud-Native Java Applications without a hassle
 
-It provides a tight integration into Maven and benefits from the build configuration already provided.
+Eclipse JKube is a collection of plugins and libraries that are used for building container images using Docker, JIB 
+or S2I build strategies. Eclipse JKube generates and deploys Kubernetes/OpenShift manifests at compile time too.
 
-This project focus on two tasks: Building Docker images and creating Kubernetes and OpenShift resource descriptors.
+It brings your Java applications on to Kubernetes and OpenShift by leveraging the tasks required to make your application
+cloud-native.
+
+Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to improve your developer experience.
 
 </div>
 </div>
 
 ## Features
 
-### JKube Kit
-
-<div class="highlight">
-
-![JKube Kit](index/briefcase-icon.svg "JKube Kit")
-
-* **Generator** framework for automatically generating Docker images by examining project information.
-* **Enricher** framework for creating and enhancing Kubernetes/OpenShift resource descriptors.
-* **Profile** combining configuration for generators and enrichers.
-* **Resource Configuration** model objects for a simplified configuration of Kubernetes/OpenShift resource.
-* **Image Configuration** model objects for modeling Docker image configuration.
-
-</div>
-
 ### Kubernetes Maven Plugin
 
 <div class="highlight">
 
-* Generates docker images with flexible and powerful configuration.
-* Supports generating Kubernetes descriptors.
+![JKube - Kubernetes Maven Plugin](index/kubernetes-logo.svg "Kubernetes logo")
+
+* Generates container images with flexible and powerful configuration (Integrates with Docker Daemon or JIB).
+* Generates vanilla Kubernetes descriptors (YAML files).
 * Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.
 * Provides **Inline Configuration** within the plugin configuration in an XML syntax.
 * Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.
-
-![JKube Kit](index/kubernetes-logo.svg "JKube Kit")
 
 </div>
 
@@ -62,13 +51,30 @@ This project focus on two tasks: Building Docker images and creating Kubernetes 
 
 <div class="highlight">
 
-![JKube Kit](index/openshift-logo.svg "JKube Kit")
-
+* Built on top of **Kubernetes Maven Plugin** provides OpenShift specific features.
 * Dealing with S2I images and hence inherits its flexible and powerful configuration.
-* Supports generating OpenShift descriptors.
+* Generates OpenShift specific descriptors (YAML files).
 * Provides **Zero Configuration** for a quick ramp-up where opinionated defaults will be pre-selected.
 * Provides **Inline Configuration** within the plugin configuration in an XML syntax.
 * Provides **External Configuration** templates of real deployment descriptors which are enriched by plugin.
+
+![JKube - OpenShift Maven Plugin](index/openshift-logo.svg "OpenShift logo")
+
+</div>
+
+
+### JKube Kit
+
+<div class="highlight">
+
+![JKube Kit](index/briefcase-icon.svg "Briefcase icon")
+
+* Core
+* **Generator** framework for automatically generating Docker images by examining project information.
+* **Enricher** framework for creating and enhancing Kubernetes/OpenShift resource descriptors.
+* **Profile** combining configuration for generators and enrichers.
+* **Resource Configuration** model objects for a simplified configuration of Kubernetes/OpenShift resource.
+* **Image Configuration** model objects for modeling Docker image configuration.
 
 </div>
 
