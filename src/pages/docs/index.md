@@ -12,16 +12,31 @@ description: "Eclipse JKube Documentation Index"
 </div>
 </div>
 
-## Getting Started
-
-Visit our [quickstarts samples](https://github.com/eclipse/jkube/tree/master/quickstarts) on GitHub to check
-available examples for your favourite framework or vanilla Java.
-
 ## Plugin Documentation
 
 * [Kubernetes Maven Plugin](/docs/kubernetes-maven-plugin)
 * [OpenShift Maven Plugin](/docs/openshift-maven-plugin)
 * [Migration Guide](/docs/migration-guide)
+
+## Getting Started
+
+### Official Quick start projects
+Visit our [quickstarts samples](https://github.com/eclipse/jkube/tree/master/quickstarts) on GitHub to check
+available examples for your favourite framework or vanilla Java.
+
+### Katacoda Courses
+
+If you want to get a taste of Eclipse JKube but don't want to install anything on your machine or don't have an
+available development environment you can try out our [Katacoda courses](https://katacoda.com/jkubeio):
+
+<div class="highlight">
+
+![Katacoda Courses](katacoda-logo.png "Katacoda logo")
+
+* [**Getting started**](https://katacoda.com/jkubeio/courses/getting-started): Several scenarios to get started with
+  Eclipse JKube using your favourite Java framework.
+
+</div>
 
 ## Javadoc
 
