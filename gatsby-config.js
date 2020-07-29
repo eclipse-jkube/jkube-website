@@ -68,7 +68,13 @@ const config = {
       options: {
         plugins: [
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              // ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`, `svg`],
+              ignoreFileExtensions: []
+            },
+          },
           {
             resolve: 'gatsby-plugin-i18n',
             options: {
@@ -80,13 +86,6 @@ const config = {
             resolve: 'gatsby-remark-external-links',
             options: {
               target: '_blank',
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-              backgroundColor: 'transparent',
             },
           },
           {
