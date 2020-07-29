@@ -14,8 +14,8 @@ description: "Eclipse JKube - Demostraciones y guías rápidas para Kubernetes y
 
 ### [Kubernetes Maven Plugin](https://asciinema.org/a/253747)
 
-![k8s sample demo](k8s-maven-plugin-demo.gif)
+[![Kubernetes Maven Plugin](https://asciinema.org/a/335724.svg)](https://asciinema.org/a/335724)
 
 ### [OpenShift Maven Plugin](https://asciinema.org/a/253742)
 
-![oc sample demo](oc-maven-plugin-demo.gif)
+[![OpenShift Maven Plugin](https://asciinema.org/a/335743.svg)](https://asciinema.org/a/335743)
