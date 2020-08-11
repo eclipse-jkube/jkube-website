@@ -24,7 +24,7 @@ const Main = ({
           dangerouslySetInnerHTML={{__html}}
         />
       </div>
-      <Footer/>
+      <Footer lang={langKey}/>
     </div>
   );
 };

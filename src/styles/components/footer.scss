@@ -1,11 +1,42 @@
 @import '../base/variables';
 
-.eclipse-jkube__footer {
+.eclipse-jkube-footer {
   padding: $default-spacing;
   border-top: 10px solid $color-black;
   background-color: $footer-background;
+  font-size: $footer-font-size;
+  font-family: $footer-font-family;
+  font-weight: $footer-font-weight;
+  line-height: $footer-line-height;
 
-  & .eclipse-jkube__footer-copyright {
+  .eclipse-jkube-footer__links {
+    margin-bottom: $default-spacing;
+    display: flex;
+    flex-wrap: wrap;
+    .eclipse-jkube-footer__links-list {
+      padding: 0;
+      margin: 0 $default-spacing * 3 $default-spacing 0;
+      list-style: none;
+      li a {
+        transition: color linear 100ms;
+        color: $color-white;
+        &:hover {
+          color: $color-light-gray;
+        }
+      }
+      li:first-child a {
+        color: $color-light-gray;
+        &:hover {
+          color: $color-link;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .eclipse-jkube-footer__copyright {
     font-family: "Roboto", sans-serif;
     color: $color-light-gray;
   }
