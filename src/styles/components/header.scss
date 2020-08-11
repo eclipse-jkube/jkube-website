@@ -11,7 +11,13 @@ $logo-width-desktop: 180px;
     height: $header-height-desktop;
   }
   background-color: $header-background;
-  & #{$header-class}-container {
+  #{$header-class}-trade-mark {
+    font-size: 0.5em;
+    font-size: 0.3em;
+    line-height: 2.5;
+    vertical-align: top;
+  }
+  #{$header-class}-container {
     position: relative;
     margin: 0 auto;
     padding: 0 $default-spacing;
@@ -24,7 +30,7 @@ $logo-width-desktop: 180px;
     }
   }
 
-  & #{$header-class}-logo {
+  #{$header-class}-logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +51,7 @@ $logo-width-desktop: 180px;
       }
     }
   }
-  & #{$header-class}-content {
+  #{$header-class}-content {
     flex: 1 0;
     min-width: 1px;
     display: flex;
@@ -70,7 +76,7 @@ $logo-width-desktop: 180px;
         font-size: $header-links-font-size;
       }
     }
-    & #{$header-class}-stars {
+    #{$header-class}-stars {
       display: block;
       width: 85px;
       height: 20px;
