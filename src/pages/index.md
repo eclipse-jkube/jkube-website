@@ -16,7 +16,7 @@ description: "Eclipse - Successor of the deprecated Fabric8 Maven Plugin"
 
 </div>
 
-# Eclipse JKube
+# Eclipse JKube&trade;
 
 ## Cloud-Native Java Applications without a hassle
 

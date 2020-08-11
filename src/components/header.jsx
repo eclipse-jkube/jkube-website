@@ -4,6 +4,10 @@ import logo from '../assets/EF_WHT-OR_png.png';
 import PropTypes from 'prop-types';
 import {resolveI18nPath} from "../i18n";
 
+const TM = () => (
+  <span className='eclipse-jkube__header-trade-mark'>&trade;</span>
+);
+
 const Header = ({lang}) => {
   const resolvePath = resolveI18nPath(lang);
   return (
@@ -11,7 +15,7 @@ const Header = ({lang}) => {
       <div className='eclipse-jkube__header-container'>
         <Link to={resolvePath('/')} className='eclipse-jkube__header-logo'>
           <div className='eclipse-jkube__header-logo-image'><img src={logo} alt='Eclipse Foundation' /></div>
-          <div>JKube</div>
+          <div>JKube<TM/></div>
         </Link>
         <div className='eclipse-jkube__header-content'>
           <ul>
