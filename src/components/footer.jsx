@@ -15,6 +15,7 @@ const Footer = ({lang}) => {
         <ul className='eclipse-jkube-footer__links-list'>
           <li><Link to={resolvePath('/docs#getting-started')}>Get Started</Link></li>
           <li><Link to={resolvePath('/docs')}>Docs</Link></li>
+          <li><Link to={resolvePath('/quickstarts')}>Quickstarts</Link></li>
           <li><Link to={resolvePath('/docs#katacoda-courses')}>Katacoda Courses</Link></li>
           <li><Link to={resolvePath('/demos')}>Demos</Link></li>
         </ul>

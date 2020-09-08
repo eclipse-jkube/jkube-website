@@ -22,6 +22,7 @@ const config = {
       },
     },
     {
+      // For gatsby-transformer-asciidoc (get docs for latest published version)
       resolve: 'gatsby-source-git',
       options: {
         name: 'jkube',
@@ -32,6 +33,19 @@ const config = {
         ]
       }
     },
+    {
+      // For jkube-quickstart-source (retrieve latest quickstarts)
+      resolve: 'gatsby-source-git',
+      options: {
+        name: 'jkube-master',
+        remote: 'https://github.com/eclipse/jkube.git',
+        branch: `master`,
+        patterns: [
+          '!*'
+        ]
+      }
+    },
+    'jkube-quickstart-source',
     {
       resolve: 'gatsby-transformer-asciidoc',
       options: {

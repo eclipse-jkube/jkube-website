@@ -1,0 +1,10 @@
+@import '../base/variables';
+
+.eclipse-jkube__quickstarts {
+  &-item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-bottom: $default-spacing;
+    }
+  }
+}

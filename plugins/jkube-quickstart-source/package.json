@@ -1,0 +1,5 @@
+{
+  "name": "jkube-quickstart-source",
+  "description": "Source plugin for Gatsby to collect JKube Quickstarts information",
+  "version": "1.1.23"
+}

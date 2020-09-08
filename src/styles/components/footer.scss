@@ -10,7 +10,8 @@
   line-height: $footer-line-height;
 
   .eclipse-jkube-footer__links {
-    margin-bottom: $default-spacing;
+    max-width: $desktop-max-width;
+    margin: 0 auto $default-spacing auto;
     display: flex;
     flex-wrap: wrap;
     .eclipse-jkube-footer__links-list {
@@ -37,6 +38,8 @@
   }
 
   .eclipse-jkube-footer__copyright {
+    max-width: $desktop-max-width;
+    margin: 0 auto $default-spacing auto;
     font-family: "Roboto", sans-serif;
     color: $color-light-gray;
   }
