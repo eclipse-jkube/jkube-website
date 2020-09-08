@@ -21,7 +21,7 @@ description: "Eclipse JKube Documentation Index"
 ## Getting Started
 
 ### Official Quick start projects
-Visit our [quickstarts samples](https://github.com/eclipse/jkube/tree/master/quickstarts) on GitHub to check
+Visit our [quickstart samples](/quickstarts) on GitHub to check
 available examples for your favourite framework or vanilla Java.
 
 ### Katacoda Courses

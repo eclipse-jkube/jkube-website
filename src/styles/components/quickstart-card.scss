@@ -1,0 +1,59 @@
+@import '../base/variables';
+
+.quick-start-card {
+  $class: &;
+  border: 1px solid $quickstart-card-border-color;
+  padding: $default-spacing;
+  #{$class}__title {
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: none;
+      &:hover, &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+  #{$class}__technologies {
+    margin: $default-spacing 0 0 0;
+    padding: 0;
+    //display: flex;
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.3rem;
+      border-radius: 0.2rem;
+      font-size: $quickstart-card-font-size;
+      margin: 0 0 0.5rem 0;
+      background: $quickstart-card-tag-background;
+      color: $quickstart-card-tag-color;
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+      &-icon {
+        display: inline-block;
+        height: $quickstart-card-font-size;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+  #{$class}__description {
+    p {
+      margin-top: 0;
+    }
+  }
+  #{$class}__links {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.2rem;
+      border: 1px solid $color-lighter-gray;
+      background: $color-lighter-gray;
+      color: $color-black;
+      &:hover, &:active {
+        background-color: $color-white;
+      }
+    }
+  }
+}

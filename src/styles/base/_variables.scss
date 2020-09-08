@@ -8,6 +8,7 @@ $font-weight-light-bold: 400;
 $color-white: #F1F2F2;
 $color-black: #222222;
 $color-orange: #DD8623;
+$color-lighter-gray: #d6d6d6;
 $color-light-gray: #939598;
 $color-link: #525C86;
 $color-gray: #666666;
@@ -36,3 +37,9 @@ $footer-line-height: 1.5;
 $footer-font-size: $base-font-size * 1.2;
 $footer-font-weight: $font-weight-normal;
 $footer-font-family: 'Roboto', sans-serif;
+
+$quickstart-card-border-color: $color-lighter-gray;
+$quickstart-card-tag-color: $color-black;
+$quickstart-card-tag-background: $color-orange;
+$quickstart-card-font-size: 0.8rem;
+
