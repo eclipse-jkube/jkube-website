@@ -1,6 +1,7 @@
 @import '../base/variables';
 
 .eclipse-jkube__quickstarts {
+  padding: 0;
   &-item {
     list-style: none;
     &:not(:last-child) {

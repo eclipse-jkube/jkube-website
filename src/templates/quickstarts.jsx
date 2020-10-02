@@ -21,7 +21,12 @@ const Quickstarts = ({title, description, langKey, nodes}) => (
         </div>
         <ul
           className='eclipse-jkube__quickstarts'
+          itemScope itemType='http://schema.org/SoftwareApplication'
         >
+          <meta itemProp='name' content='Eclipse JKube' />
+          <meta itemProp='applicationCategory' content='Developer Tools' />
+          <meta itemProp='operatingSystem' content='Linux,Windows,OSX,Mac' />
+          <meta itemProp='downloadUrl' content='https://github.com/eclipse/jkube' />
           {nodes.map(node => (
             <li key={node.artifactId} className='eclipse-jkube__quickstarts-item'>
               <QuickStartCard

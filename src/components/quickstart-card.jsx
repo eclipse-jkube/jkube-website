@@ -13,9 +13,14 @@ const icons = {
 };
 
 const QuickStartCard = ({title, description, technologies, url}) => (
-  <div className='quick-start-card'>
+  <div className='quick-start-card' itemScope itemType='http://schema.org/SoftwareSourceCode'>
+    <meta itemProp='programmingLanguage' content='Java'/>
+    <meta itemProp='codeSampleType' content='full (compile ready) solution'/>
+    <meta itemProp='keywords' content={technologies.join(',')} />
+    <meta itemProp='name' content={title} />
+    <meta itemProp='codeRepository' content={url} />
     <h3 className='quick-start-card__title'>
-      <a href={url}>{title}</a>
+      <a href={url} itemProp='url'>{title}</a>
     </h3>
     <ul className='quick-start-card__technologies'>
       {technologies.map(tech => (
@@ -25,7 +30,7 @@ const QuickStartCard = ({title, description, technologies, url}) => (
         </li>
       ))}
     </ul>
-    <div className='quick-start-card__description'>
+    <div className='quick-start-card__description' itemProp='description'>
       {description.split(/[\n\r]/).map(l => l.trim()).map((line, idx) => (
         <p key={idx}>{line}</p>
       ))}
