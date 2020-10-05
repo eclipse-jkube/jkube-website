@@ -9,6 +9,18 @@
   font-weight: $footer-font-weight;
   line-height: $footer-line-height;
 
+  .eclipse-jkube-footer__logo-jkube {
+    display: flex;
+    flex-direction: column;
+    max-width: $desktop-max-width;
+    margin: 0 auto $default-spacing auto;
+    .eclipse-jkube-footer__logo-jkube-image {
+      width: $footer-logo-width;
+    }
+    .eclipse-jkube-footer__logo-jkube-tagline {
+      color: $color-light-gray;
+    }
+  }
   .eclipse-jkube-footer__links {
     max-width: $desktop-max-width;
     margin: 0 auto $default-spacing auto;
