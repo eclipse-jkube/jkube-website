@@ -40,7 +40,7 @@ $logo-width-desktop: 180px;
     @media all and (min-width: $desktop-min-width ) {
       font-size: 50px;
     }
-    &-image {
+    &-eclipse-image {
       height: $header-logo-height;
       @media all and (min-width: $desktop-min-width ) {
         height: $header-logo-height-desktop;
@@ -49,6 +49,18 @@ $logo-width-desktop: 180px;
         max-height: 100%;
         max-width: 100%;
       }
+    }
+    &-jkube {
+      height: $header-logo-jkube-height;
+      @media all and (min-width: $desktop-min-width ) {
+        height: $header-logo-jkube-height-desktop;
+      }
+      &-image {
+        height: 100%;
+      }
+    }
+    &:hover {
+      color: $color-white;
     }
   }
   #{$header-class}-content {

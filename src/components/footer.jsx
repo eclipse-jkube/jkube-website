@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from "gatsby";
 import PropTypes from 'prop-types';
+import {Link} from "gatsby";
 import {resolveI18nPath} from "../i18n";
+import jkubeLogo from "../assets/jkube-logo-horizontal-white.svg";
 
 const ExternalLink = ({href, title}) => (
   <a href={href} target='_blank' rel='nofollow noopener noreferrer'>{title}</a>
@@ -11,6 +12,14 @@ const Footer = ({lang}) => {
   const resolvePath = resolveI18nPath(lang);
   return (
     <div className='eclipse-jkube-footer'>
+      <div className='eclipse-jkube-footer__logo-jkube'>
+        <Link to={resolvePath('/')}>
+          <img className='eclipse-jkube-footer__logo-jkube-image' src={jkubeLogo} alt='JKube' />
+        </Link>
+        <span className='eclipse-jkube-footer__logo-jkube-tagline'>
+          Cloud-Native Java Applications without a hassle
+        </span>
+      </div>
       <div className='eclipse-jkube-footer__links'>
         <ul className='eclipse-jkube-footer__links-list'>
           <li><Link to={resolvePath('/docs#getting-started')}>Get Started</Link></li>

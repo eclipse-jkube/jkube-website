@@ -1,23 +1,28 @@
 import React from 'react';
 import {Link} from 'gatsby'
 import logo from '../assets/EF_WHT-OR_png.png';
+import jkubeLogo from '../assets/jkube-logo-horizontal-white.svg';
 import PropTypes from 'prop-types';
 import {resolveI18nPath} from "../i18n";
 
+const cClass = 'eclipse-jkube__header';
+
 const TM = () => (
-  <span className='eclipse-jkube__header-trade-mark'>&trade;</span>
+  <span className={`${cClass}-trade-mark`}>&trade;</span>
 );
 
 const Header = ({lang}) => {
   const resolvePath = resolveI18nPath(lang);
   return (
-    <header className='eclipse-jkube__header'>
-      <div className='eclipse-jkube__header-container'>
-        <Link to={resolvePath('/')} className='eclipse-jkube__header-logo'>
-          <div className='eclipse-jkube__header-logo-image'><img src={logo} alt='Eclipse Foundation' /></div>
-          <div>JKube<TM/></div>
+    <header className={cClass}>
+      <div className={`${cClass}-container`}>
+        <Link to={resolvePath('/')} className={`${cClass}-logo`}>
+          <div className={`${cClass}-logo-eclipse-image`}><img src={logo} alt='Eclipse Foundation' /></div>
+          <div className={`${cClass}-logo-jkube`}>
+            <img className={`${cClass}-logo-jkube-image`} src={jkubeLogo} alt='JKube' /><TM/>
+          </div>
         </Link>
-        <div className='eclipse-jkube__header-content'>
+        <div className={`${cClass}-content`}>
           <ul>
             <li><Link to={resolvePath('/docs')}>Docs</Link></li>
             <li><Link to={resolvePath('/demos')}>Demos</Link></li>
@@ -25,7 +30,7 @@ const Header = ({lang}) => {
             <li><Link to={resolvePath('/contributing')}>Contributing</Link></li>
             <li>
               <a
-                className='eclipse-jkube__header-stars'
+                className={`${cClass}-stars`}
                 href='https://github.com/eclipse/jkube' title='eclipse/jkube'
                 target='_blank' rel='nofollow noopener noreferrer'
               >
