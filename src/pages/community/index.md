@@ -17,31 +17,36 @@ Do you want to get involved?
 </div>
 
 
-## Support
+## <i class="header__icon fas fa-life-ring"></i> Support
 
 For any question, bug reporting, feature request, etc. please open a
 [GitHub issue](https://github.com/eclipse/jkube/issues/new) in our main repository.
 
-## Public chat
+## <i class="header__icon cib-gitter"></i> Public chat
 
 If you need an answer right away, check the [Eclipse JKube Gitter](https://gitter.im/eclipse/jkube) channel.
 Community and team members are eager to help you out or point to helpful resources to solve your questions. 
 
-## Twitter
+## <i class="header__icon cib-twitter"></i> Twitter
 
 For the latest news about Eclipse JKube, follow [@jkubeio on Twitter](https://twitter.com/jkubeio).
 
-## Stack Overflow
+## <i class="header__icon cib-youtube"></i> YouTube 
+
+Subscribe to our [YouTube channel](https://www.youtube.com/channel/UCpU2tjgpfkTVgeDq-DBSV7A) where you'll
+find Demos, links to conference talks, Sprint Reviews, etc.
+
+## <i class="header__icon cib-stackoverflow"></i> Stack Overflow
 
 Check out for existing questions tagged with [jkube](https://stackoverflow.com/questions/tagged/jkube) or
 [ask your own](https://stackoverflow.com/questions/ask?tags=jkube).
 
-## Mailing list
+## <i class="header__icon far fa-envelope"></i> Mailing list
 
 Sign up to our [mailing list](https://accounts.eclipse.org/mailing-list/jkube-dev) to receive official updates about
 Eclipse JKube.
 
-## Planning and Meetings
+## <i class="header__icon far fa-calendar-alt"></i> Planning and Meetings
 
 Check our team's plans in Eclipse JKube's [projects](https://github.com/eclipse/jkube/projects) page.
 

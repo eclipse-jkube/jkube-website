@@ -22,11 +22,18 @@ h1 {
   font-weight: $font-weight-normal;
 }
 h2 {
+  display: flex;
+  align-items: center;
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-weight: $font-weight-normal;
+  .header__icon {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
 }
+
 h3 {
   font-size: 1.5rem;
   font-weight: $font-weight-normal;
