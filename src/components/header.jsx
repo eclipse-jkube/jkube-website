@@ -32,7 +32,7 @@ const Header = ({lang}) => {
               <a
                 className={`${cClass}-stars`}
                 href='https://github.com/eclipse/jkube' title='eclipse/jkube'
-                target='_blank' rel='nofollow noopener noreferrer'
+                target='_blank' rel='noopener'
               >
                 <img src='https://img.shields.io/github/stars/eclipse/jkube?style=social' alt='eclipse/jkube stargazers' />
               </a>
