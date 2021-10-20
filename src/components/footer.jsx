@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from "gatsby";
-import {resolveI18nPath} from "../i18n";
-import jkubeLogo from "../assets/jkube-logo-horizontal-white.svg";
+import {Link} from 'gatsby';
+import {resolveI18nPath} from '../i18n';
+import jkubeLogo from '../assets/jkube-logo-horizontal-white.svg';
 
 const ExternalLink = ({href, title}) => (
-  <a href={href} target='_blank' rel='nofollow noopener noreferrer'>{title}</a>
+  <a href={href} target='_blank' rel='noopener'>{title}</a>
 );
 
 const Footer = ({lang}) => {
