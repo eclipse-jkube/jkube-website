@@ -5,6 +5,19 @@ const mainTemplate = path.resolve('src', 'templates', 'main.jsx');
 const docTemplate = path.resolve('src', 'templates', 'doc.jsx');
 
 /**
+ * Checks if the node should be created or not for the given content / plugin type
+ */
+// TODO - Find a better way to align the content and the plugins
+const isValidNode = node => {
+  if (node.document.title.endsWith('maven-plugin') && node.author.fullName && node.author.fullName.startsWith('Roland')) {
+    return true;
+  } else if (node.document.title.endsWith('gradle-plugin') && !node.author.fullName) {
+    return true;
+  }
+  return false;
+}
+
+/**
  * Duplicates any node created with Asciidoc transformer plugin
  *
  * We are currently using 2 'gatsby-transformer-asciidoc' plugins with different attributes in order to generate
@@ -17,9 +30,9 @@ const docTemplate = path.resolve('src', 'templates', 'doc.jsx');
  * We'll use this instead for documentation generation.
  */
 const duplicateAsciiNodes = ({node, actions: {createNode}, createNodeId, createContentDigest}) => {
-  if (node.internal.type === 'Asciidoc') {
+  if (node.internal.type === 'Asciidoc' && isValidNode(node)) {
     const duplicateAsciiNode = {...node,
-      id: createNodeId(`${node.id}- ${node.document.title}`),
+      id: createNodeId(`${node.id}-${node.document.title}`),
       parent: null,
       internal: {
         type: 'AsciidocCopy',
