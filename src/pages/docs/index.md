@@ -16,6 +16,8 @@ description: "Eclipse JKube Documentation Index"
 
 * [Kubernetes Maven Plugin](/docs/kubernetes-maven-plugin)
 * [OpenShift Maven Plugin](/docs/openshift-maven-plugin)
+* [Kubernetes Gradle Plugin](/docs/kubernetes-gradle-plugin)
+* [OpenShift Gradle Plugin](/docs/openshift-gradle-plugin)
 * [Migration Guide](/docs/migration-guide)
 
 ## Getting Started
