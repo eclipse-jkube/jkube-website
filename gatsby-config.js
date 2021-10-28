@@ -29,7 +29,8 @@ const config = {
         remote: 'https://github.com/eclipse/jkube.git',
         branch: `v${latestJKubeVersion}`,
         patterns: [
-          'kubernetes-maven-plugin/doc/**/index.adoc'
+          'kubernetes-maven-plugin/doc/**/index.adoc',
+          'gradle-plugin/doc/**/index.adoc'
         ]
       }
     },
@@ -74,6 +75,32 @@ const config = {
           plugin: 'openshift-maven-plugin',
           version: latestJKubeVersion,
           'goal-prefix': 'oc'
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-asciidoc',
+      options: {
+        safe: 'unsafe',
+        attributes: {
+          plugin: 'kubernetes-gradle-plugin',
+          version: latestJKubeVersion,
+          'task-prefix': 'k8s',
+          'cluster': 'Kubernetes',
+          'pluginExtension': 'kubernetes'
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-asciidoc',
+      options: {
+        safe: 'unsafe',
+        attributes: {
+          plugin: 'openshift-gradle-plugin',
+          version: latestJKubeVersion,
+          'task-prefix': 'oc',
+          'cluster': 'OpenShift',
+          'pluginExtension': 'openshift'
         }
       }
     },
