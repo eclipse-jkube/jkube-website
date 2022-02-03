@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../base/variables';
 
 @mixin full-width() {
@@ -108,7 +110,7 @@
     & .calendar {
       $calendar-aspect-ratio: 75;
       $calendar-max-height: 500px;
-      $calendar-width-break: $calendar-max-height / ($calendar-aspect-ratio / 100);
+      $calendar-width-break: math.div($calendar-max-height, ($calendar-aspect-ratio * 0.01));
       position: relative;
       overflow: hidden;
       padding-bottom: $calendar-aspect-ratio * 1%;

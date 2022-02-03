@@ -81,7 +81,7 @@ $logo-width-desktop: 180px;
         justify-content: flex-start;
       }
       li {
-        margin: ($default-spacing / 4) 0;
+        margin: ($default-spacing * 0.25) 0;
         padding-right: $default-spacing;
         list-style: none;
         color: $color-white;
