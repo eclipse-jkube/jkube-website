@@ -8,6 +8,7 @@ import 'prismjs/components/prism-markup.min'
 import 'prismjs/components/prism-yaml.min'
 import 'prismjs/themes/prism-solarizedlight.css'
 import '../styles/main.scss';
+import Footer from '../components/footer';
 
 const componentDidMount = () => {
   window.Prism.highlightAll()
@@ -35,6 +36,7 @@ const Doc = ({
           className='eclipse-jkube__documentation-content'
           dangerouslySetInnerHTML={{__html}}
         />
+        <Footer lang={langKey}/>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 @import '../asciidoctor/asciidoctor';
 
 $toc-breakpoint: 768px;
-$toc-width: 20em;
+$toc-width: 20rem;
 
 .eclipse-jkube__documentation {
   margin: 0;
@@ -19,7 +19,7 @@ $toc-width: 20em;
     padding: $default-spacing;
     overflow: hidden;
     @media screen and (min-width: $toc-breakpoint) {
-      padding-left: $toc-width + 1em;
+      padding-left: $toc-width + 1rem;
       .toc {
         position: fixed;
         width: $toc-width;
@@ -36,6 +36,12 @@ $toc-width: 20em;
     }
     i.fa {
       font-style: normal;
+    }
+  }
+
+  .eclipse-jkube-footer {
+    @media screen and (min-width: $toc-breakpoint) {
+      margin-left: $toc-width;
     }
   }
 }
