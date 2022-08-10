@@ -77,6 +77,8 @@ Click Import and then select the `eclipse-format.xml` file in the `ide-config` d
 Next navigate to Java -> Code Style -> Organize Imports.
 Click Import and select the `eclipse.importorder` file in the `ide-config` directory.
 
+![Eclipse Code Formatter Settings](eclipse-code-formatter-settings.gif "Eclipse Code Formatter Plugin")
+
 #### IDEA Setup
 
 Open the Preferences window (or Settings depending on your edition), navigate to Plugins and install the
