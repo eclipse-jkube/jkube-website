@@ -2,13 +2,13 @@ import React from 'react';
 import {graphql} from 'gatsby';
 import Footer from '../components/footer'
 import Header from '../components/header';
-import Seo from '../components/seo';
+import {Seo} from '../components';
+
 import '../styles/main.scss';
 
 const Main = ({
   data: {
     markdownRemark: {
-      frontmatter: {title, description},
       html: __html
     }
   },
@@ -16,7 +16,6 @@ const Main = ({
 }) => {
   return (
     <div className='eclipse-jkube'>
-      <Seo title={title} description={description} lang={langKey}/>
       <Header lang={langKey}/>
       <div className='eclipse-jkube__main'>
         <div
@@ -28,6 +27,16 @@ const Main = ({
     </div>
   );
 };
+
+export const Head = ({
+  data: {
+    markdownRemark: {
+      frontmatter: {title, description},
+    }
+  }
+}) => (
+  <Seo title={title} description={description}/>
+);
 
 export const pageQuery = graphql`
   query($slug: String!) {

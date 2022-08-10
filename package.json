@@ -38,7 +38,6 @@
     "asciidoctor": "2.2.6",
     "gatsby": "4.20.0",
     "gatsby-plugin-i18n": "1.0.1",
-    "gatsby-plugin-react-helmet": "5.20.0",
     "gatsby-plugin-sass": "5.20.0",
     "gatsby-plugin-sharp": "4.20.0",
     "gatsby-remark-autolink-headers": "5.20.0",
@@ -54,7 +53,6 @@
     "prismjs": "1.28.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-helmet": "6.1.0",
     "sass": "1.54.4"
   }
 }
