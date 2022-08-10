@@ -11,7 +11,6 @@ const config = {
   },
   pathPrefix: '/jkube',
   plugins: [
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
     {

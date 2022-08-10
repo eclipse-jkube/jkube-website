@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import {graphql} from 'gatsby';
 import Header from '../components/header';
-import Seo from '../components/seo';
+import {Seo} from '../components';
+import Footer from '../components/footer';
 import 'prismjs/prism';
 import 'prismjs/components/prism-java.min'
 import 'prismjs/components/prism-markup.min'
 import 'prismjs/components/prism-yaml.min'
 import 'prismjs/themes/prism-solarizedlight.css'
 import '../styles/main.scss';
-import Footer from '../components/footer';
 
 const componentDidMount = () => {
   window.Prism.highlightAll()
@@ -17,10 +17,6 @@ const componentDidMount = () => {
 const Doc = ({
   data: {
     asciidocCopy: {
-      document: {
-        title,
-        subtitle
-      },
       html: __html
     }
   },
@@ -29,7 +25,6 @@ const Doc = ({
   useEffect(componentDidMount, []);
   return (
     <div className='eclipse-jkube'>
-      <Seo title={title} description={subtitle} lang={langKey}/>
       <Header lang={langKey}/>
       <div className='eclipse-jkube__documentation book toc2 toc-left'>
         <div
@@ -42,6 +37,15 @@ const Doc = ({
   );
 };
 
+export const Head = ({
+  data: {
+    asciidocCopy: {
+      document: {title, subtitle}
+    }
+  }
+}) => (
+  <Seo title={title} description={subtitle} />
+);
 
 export const pageQuery = graphql`
   query($id: String!) {
