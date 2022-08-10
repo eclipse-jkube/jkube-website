@@ -1,8 +1,6 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import Footer from '../components/footer'
-import Header from '../components/header';
-import {Seo} from '../components';
+import {Footer, Header, Seo} from '../components';
 
 import '../styles/main.scss';
 

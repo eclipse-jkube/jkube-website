@@ -11,7 +11,7 @@ const TM = () => (
   <span className={`${cClass}-trade-mark`}>&trade;</span>
 );
 
-const Header = ({lang}) => {
+export const Header = ({lang}) => {
   const resolvePath = resolveI18nPath(lang);
   return (
     <header className={cClass}>
@@ -47,5 +47,3 @@ const Header = ({lang}) => {
 Header.propTypes = {
   lang: PropTypes.string.isRequired,
 };
-
-export default Header;

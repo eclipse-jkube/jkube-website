@@ -8,7 +8,7 @@ const ExternalLink = ({href, title}) => (
   <a href={href} target='_blank' rel='noopener'>{title}</a>
 );
 
-const Footer = ({lang}) => {
+export const Footer = ({lang}) => {
   const resolvePath = resolveI18nPath(lang);
   return (
     <div className='eclipse-jkube-footer'>
@@ -49,5 +49,3 @@ const Footer = ({lang}) => {
 Footer.propTypes = {
   lang: PropTypes.string.isRequired,
 };
-
-export default Footer;

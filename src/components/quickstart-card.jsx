@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {Footer} from './footer';
 
 const icons = {
   ApacheCamel: 'cib-apache',
@@ -12,7 +14,7 @@ const icons = {
   Vertx: 'cib-eclipseide'
 };
 
-const QuickStartCard = ({title, description, technologies, url}) => (
+export const QuickStartCard = ({title, description, technologies, url}) => (
   <div className='quick-start-card' itemScope itemType='http://schema.org/SoftwareSourceCode'>
     <meta itemProp='programmingLanguage' content='Java'/>
     <meta itemProp='codeSampleType' content='full (compile ready) solution'/>
@@ -41,4 +43,9 @@ const QuickStartCard = ({title, description, technologies, url}) => (
   </div>
 );
 
-export default QuickStartCard;
+QuickStartCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  url: PropTypes.string.isRequired
+};
