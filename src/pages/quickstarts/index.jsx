@@ -1,9 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby';
-import {Seo} from '../../components';
-import Header from '../../components/header';
-import QuickStartCard from '../../components/quickstart-card';
-import Footer from '../../components/footer';
+import {Footer, Header, QuickStartCard, Seo} from '../../components';
 
 import '../../styles/main.scss';
 

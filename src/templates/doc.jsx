@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import {graphql} from 'gatsby';
-import Header from '../components/header';
-import {Seo} from '../components';
-import Footer from '../components/footer';
+import {Footer, Header, Seo} from '../components';
 import 'prismjs/prism';
 import 'prismjs/components/prism-java.min'
 import 'prismjs/components/prism-markup.min'
