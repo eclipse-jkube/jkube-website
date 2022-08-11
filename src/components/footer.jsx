@@ -41,7 +41,7 @@ export const Footer = ({lang}) => {
           <li><ExternalLink href='https://www.eclipse.org/legal' title='Legal Resources'/></li>
         </ul>
       </div>
-      <div className='eclipse-jkube-footer__copyright'>Copyright © Eclipse Foundation 2020</div>
+      <div className='eclipse-jkube-footer__copyright'>Copyright © Eclipse Foundation</div>
     </div>
   );
 };
