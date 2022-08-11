@@ -1,26 +1,23 @@
 {
   "env": {
-    "browser": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "browser": true
   },
-  "extends": [
-    "eslint:recommended"
-  ],
-  "plugins": [
-    "react"
-  ],
-  "globals": {
-    "graphql": false
-  },
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2019,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
-      "arrowFunctions": true,
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    }
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    },
+    "babelOptions": {
+      "presets": [
+        "babel-preset-gatsby"
+      ]
+    },
+    "requireConfigFile": false
   },
   "rules": {
     // React
@@ -30,5 +27,12 @@
     "indent": [2, 2, {
       "SwitchCase": 1
     }]
-  }
+  },
+  "plugins": [
+    "react",
+    "graphql"
+  ],
+  "extends": [
+    "eslint:recommended"
+  ]
 }
