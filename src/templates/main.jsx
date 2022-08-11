@@ -1,6 +1,6 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import {Footer, Header, Seo} from '../components';
+import {MainLayout, Seo} from '../components';
 
 import '../styles/main.scss';
 
@@ -11,20 +11,14 @@ const Main = ({
     }
   },
   pageContext: {langKey}
-}) => {
-  return (
-    <div className='eclipse-jkube'>
-      <Header lang={langKey}/>
-      <div className='eclipse-jkube__main'>
-        <div
-          className='eclipse-jkube__content'
-          dangerouslySetInnerHTML={{__html}}
-        />
-      </div>
-      <Footer lang={langKey}/>
-    </div>
-  );
-};
+}) => (
+  <MainLayout langKey={langKey}>
+    <div
+      className='eclipse-jkube__content'
+      dangerouslySetInnerHTML={{__html}}
+    />
+  </MainLayout>
+);
 
 export const Head = ({
   data: {
