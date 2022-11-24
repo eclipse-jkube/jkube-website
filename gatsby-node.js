@@ -47,10 +47,7 @@ const duplicateAsciiNodes = ({node, actions: {createNode}, createNodeId, createC
 const createMarkdownPages = async ({createPage, graphql, reporter}) => {
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        limit: 1000
-      ) {
+      allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
         edges {
           node {
             fields {

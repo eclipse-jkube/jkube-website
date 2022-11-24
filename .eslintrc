@@ -29,8 +29,7 @@
     }]
   },
   "plugins": [
-    "react",
-    "graphql"
+    "react"
   ],
   "extends": [
     "eslint:recommended"
