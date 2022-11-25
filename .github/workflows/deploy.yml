@@ -9,17 +9,22 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    env:
-      SSH_USER: ${{ secrets.SSH_USER }}
-      SSH_KEY: ${{ secrets.SSH_KEY }}
-      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
-      GIT_NAME: ${{ secrets.GIT_NAME }}
+#    env:
+#      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+#      GIT_NAME: ${{ secrets.GIT_NAME }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '18.x'
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT_GITHUB }}
+          repository: jkubeio/jkube-website-publish
+          ref: main
+          path: jkube-website-publish
       - name: Deploy
         run: ./scripts/deploy.sh
