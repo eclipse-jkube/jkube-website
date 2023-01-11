@@ -47,7 +47,7 @@
     "gatsby-source-filesystem": "5.1.0",
     "gatsby-source-git": "1.1.0",
     "gatsby-transformer-asciidoc": "4.1.0",
-    "gatsby-transformer-remark": "6.1.0",
+    "gatsby-transformer-remark": "6.3.2",
     "prismjs": "1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
