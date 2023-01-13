@@ -1,8 +1,8 @@
 ---
 path: "/"
 date: "2020-01-02"
-title: "Eclipse JKube - Successor of the deprecated Fabric8 Maven Plugin"
-description: "Eclipse - Successor of the deprecated Fabric8 Maven Plugin"
+title: "Eclipse JKube - Build and Deploy java applications on Kubernetes"
+description: "Eclipse JKube - Build and Deploy java applications on Kubernetes"
 ---
 <div class="hero">
 <div class="hero-content">
