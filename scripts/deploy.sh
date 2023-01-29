@@ -36,7 +36,7 @@ function deployAsSingleCommit() {
 }
 
 function deploy() {
-  cp -avr "$WEB_DIR/public/"* "$ECLIPSE_REPO_DIR"git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated" --signoff
+  cp -avr "$WEB_DIR/public/"* "$ECLIPSE_REPO_DIR"
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" add "$ECLIPSE_REPO_DIR"
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated" --signoff
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" push -f origin main
