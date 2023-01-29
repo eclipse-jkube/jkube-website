@@ -14,6 +14,7 @@ function initEnvironment() {
 }
 
 function prepareEclipseRepo() {
+  # Repo should already be checked-out by action
   find "$ECLIPSE_REPO_DIR" -maxdepth 1 ! -path "$ECLIPSE_REPO_DIR" ! -name '.git' -exec rm -rf {} +
 }
 
@@ -22,13 +23,22 @@ function build() {
   npm run  --prefix "$WEB_DIR" build
 }
 
-function deploy() {
+# Unused at the moment https://gitlab.eclipse.org/eclipsefdn/helpdesk/-/issues/2543#note_1072378
+# Eclipse's deployment script doesn't support this
+function deployAsSingleCommit() {
   cp -avr "$WEB_DIR/public/"* "$ECLIPSE_REPO_DIR"
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" checkout --orphan temp-branch
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" add "$ECLIPSE_REPO_DIR"
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated" --signoff
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" branch -D main
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" branch -m main
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" push -f origin main
+}
+
+function deploy() {
+  cp -avr "$WEB_DIR/public/"* "$ECLIPSE_REPO_DIR"git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated" --signoff
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" add "$ECLIPSE_REPO_DIR"
+  git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" commit -m "CI: Website updated" --signoff
   git --git-dir "$ECLIPSE_REPO_DIR/.git" --work-tree "$ECLIPSE_REPO_DIR" push -f origin main
 }
 
