@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "asciidoctor": "2.2.6",
-    "gatsby": "5.1.0",
+    "gatsby": "5.5.0",
     "gatsby-plugin-i18n": "1.0.1",
     "gatsby-plugin-sass": "6.1.0",
     "gatsby-plugin-sharp": "5.1.0",
