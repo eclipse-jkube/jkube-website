@@ -26,8 +26,7 @@ const config = {
       options: {
         name: 'jkube',
         remote: 'https://github.com/eclipse/jkube.git',
-        // branch: `v${latestJKubeVersion}`, // TODO: disable since there is an issue with 1.10.1 documentation
-        branch: 'master',
+        branch: `v${latestJKubeVersion}`,
         patterns: [
           'kubernetes-maven-plugin/doc/**/index.adoc',
           'gradle-plugin/doc/**/index.adoc'
