@@ -60,7 +60,7 @@ Check our team's plans in Eclipse JKube's [projects](https://github.com/eclipse/
 Stay tuned to our
 [public calendar](https://calendar.google.com/calendar/embed?src=n38b3vf86tupe7ennn65ntmchk%40group.calendar.google.com&ctz=GMT)
 to see when our next Sprint planning or meeting happens and feel free to join our
-[public meeting room](https://bluejeans.com/656779179).
+[public meeting room](https://meet.google.com/oog-jdqy-szy).
 
 <div class="calendar">
 
