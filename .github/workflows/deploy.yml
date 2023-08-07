@@ -1,4 +1,4 @@
-name: Deploy to www.eclipse.org/jkube
+name: Deploy to www.eclipse.dev/jkube
 
 on:
   push:

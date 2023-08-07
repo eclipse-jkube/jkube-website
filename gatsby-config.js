@@ -7,7 +7,7 @@ const config = {
   siteMetadata: {
     title: 'Eclipse JKube',
     author: 'Eclipse JKube Development Team',
-    siteUrl: 'https://eclipse.org/jkube',
+    siteUrl: 'https://eclipse.dev/jkube',
   },
   pathPrefix: '/jkube',
   plugins: [
