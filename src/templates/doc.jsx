@@ -18,18 +18,18 @@ const Doc = ({
       html: __html
     }
   },
-  pageContext: {langKey}
+  pageContext: {locale}
 }) => {
   useEffect(componentDidMount, []);
   return (
     <div className='eclipse-jkube'>
-      <Header lang={langKey}/>
+      <Header locale={locale}/>
       <div className='eclipse-jkube__documentation book toc2 toc-left'>
         <div
           className='eclipse-jkube__documentation-content'
           dangerouslySetInnerHTML={{__html}}
         />
-        <Footer lang={langKey}/>
+        <Footer locale={locale}/>
       </div>
     </div>
   );

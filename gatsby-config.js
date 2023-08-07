@@ -1,13 +1,14 @@
-const {defaultLangKey} = require('./src/i18n');
+const {defaultLocale} = require('./src/i18n');
 const {readLatestVersion} = require('./src/jkube-utils');
 
 const latestJKubeVersion = readLatestVersion();
+const siteUrl = 'https://eclipse.dev/jkube';
 
 const config = {
   siteMetadata: {
     title: 'Eclipse JKube',
     author: 'Eclipse JKube Development Team',
-    siteUrl: 'https://eclipse.dev/jkube',
+    siteUrl
   },
   pathPrefix: '/jkube',
   plugins: [
@@ -17,7 +18,7 @@ const config = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'markdown-pages',
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/content`,
       },
     },
     {
@@ -104,9 +105,10 @@ const config = {
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: ['.md', '.mdx'],
+        gatsbyRemarkPlugins: [
           'gatsby-remark-autolink-headers',
           {
             resolve: 'gatsby-remark-copy-linked-files',
@@ -116,10 +118,13 @@ const config = {
             },
           },
           {
-            resolve: 'gatsby-plugin-i18n',
+            resolve: 'gatsby-plugin-i18n-l10n',
             options: {
-              langKeyDefault: defaultLangKey,
-              useLangKeyLayout: false,
+              siteUrl, defaultLocale,
+              locales: [
+                {locale: 'en-US', prefix: 'en', slugs: {}, messages: {}},
+                {locale: 'es-ES', prefix: 'es', slugs: {}, messages: {}},
+              ]
             },
           },
           {
@@ -135,7 +140,7 @@ const config = {
             },
           }
         ],
-      },
+      }
     },
   ]
 };

@@ -4,8 +4,8 @@ date: "2020-02-24"
 title: "Eclipse JKube Migration Guide"
 description: "Eclipse JKube migration guide from Fabric8 Maven Plugin (FMP)"
 ---
-<div class="hero">
-<div class="hero-content">
+<div className="hero">
+<div className="hero-content">
 
 # Documentation
 
@@ -24,7 +24,7 @@ environments.
 
 Run the following command in you project's root directory:
 
-```shell script
+```bash
 mvn org.eclipse.jkube:kubernetes-maven-plugin:migrate
 ```
 
@@ -33,9 +33,9 @@ Maven coordinates in your `pom.xml` will change from `io.fabric8:fabric8-maven-p
 
 ### Projects targeting OpenShift Clusters
 
-Run the following command in you project's root directory:
+Run the following command in your project's root directory:
 
-```shell script
+```bash
 mvn org.eclipse.jkube:openshift-maven-plugin:migrate
 ```
 

@@ -8,8 +8,8 @@ const ExternalLink = ({href, title}) => (
   <a href={href} target='_blank' rel='noopener'>{title}</a>
 );
 
-export const Footer = ({lang}) => {
-  const resolvePath = resolveI18nPath(lang);
+export const Footer = ({locale}) => {
+  const resolvePath = resolveI18nPath(locale);
   return (
     <div className='eclipse-jkube-footer'>
       <div className='eclipse-jkube-footer__logo-jkube'>
@@ -46,5 +46,5 @@ export const Footer = ({lang}) => {
 };
 
 Footer.propTypes = {
-  lang: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
 };

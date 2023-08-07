@@ -4,8 +4,8 @@ date: "2020-02-22"
 title: "Eclipse JKube Documentation"
 description: "Eclipse JKube Documentation Index"
 ---
-<div class="hero">
-<div class="hero-content">
+<div className="hero">
+<div className="hero-content">
 
 # Documentation
 

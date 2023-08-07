@@ -1,5 +1,5 @@
 const path = require('path');
-const {defaultLangKey} = require('./src/i18n');
+const {defaultLocale} = require('./src/i18n');
 
 const mainTemplate = path.resolve('src', 'templates', 'main.jsx');
 const docTemplate = path.resolve('src', 'templates', 'doc.jsx');
@@ -45,17 +45,22 @@ const duplicateAsciiNodes = ({node, actions: {createNode}, createNodeId, createC
 };
 
 const createMarkdownPages = async ({createPage, graphql, reporter}) => {
-  const result = await graphql(`
+  const {errors, data} = await graphql(`
     {
-      allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+      allMdx(sort: {frontmatter: {date: DESC}}, limit: 1000) {
         edges {
           node {
-            fields {
-              slug
-              langKey
-            }
+            id
             frontmatter {
               path
+            }
+            fields {
+              locale
+              path
+              pathPrefix
+            }
+            internal {
+              contentFilePath
             }
           }
         }
@@ -63,21 +68,21 @@ const createMarkdownPages = async ({createPage, graphql, reporter}) => {
     }
   `);
 
-  if (result.errors) {
+  if (errors) {
     reporter.panicOnBuild('Error while running GraphQL query for Markdown pages.');
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  data.allMdx.edges.forEach(({node: {id, frontmatter: {path}, fields: {locale, pathPrefix}, internal: {contentFilePath}}}) => {
     createPage({
-      path: node.fields.slug,
-      component: mainTemplate,
+      path: `${pathPrefix}${path}`,
+      component: `${mainTemplate}?__contentFilePath=${contentFilePath}`,
       context: {
-        langKey: node.fields.langKey,
-        slug: node.fields.slug
+        id,
+        locale,
       },
-    })
-  })
+    });
+  });
 };
 
 const createAsciiDocPages = async({createPage, graphql, reporter}) => {
@@ -109,7 +114,7 @@ const createAsciiDocPages = async({createPage, graphql, reporter}) => {
       component: docTemplate,
       context: {
         id: node.id,
-        langKey: defaultLangKey,
+        locale: defaultLocale,
       },
     })
   })

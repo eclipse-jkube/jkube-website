@@ -4,10 +4,10 @@ date: "2020-01-02"
 title: "Eclipse JKube"
 description: "Página de bienvenida de JKube"
 ---
-<div class="hero">
-<div class="hero-content">
+<div className="hero">
+<div className="hero-content">
 
-<div class="getting-involved">
+<div className="getting-involved">
 
 [![Twitter](https://img.shields.io/twitter/follow/jkubeio?label=Follow)](https://twitter.com/jkubeio)
 [![Twitter](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCpU2tjgpfkTVgeDq-DBSV7A)
