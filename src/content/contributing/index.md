@@ -4,8 +4,8 @@ date: "2020-02-28"
 title: "Contributing to Eclipse JKube"
 description: "Eclipse JKube contributing main guidelines"
 ---
-<div class="hero">
-<div class="hero-content">
+<div className="hero">
+<div className="hero-content">
 
 # Contributing guide
 

@@ -5,35 +5,33 @@ import {MainLayout, Seo} from '../components';
 import '../styles/main.scss';
 
 const Main = ({
-  data: {
-    markdownRemark: {
-      html: __html
-    }
-  },
-  pageContext: {langKey}
-}) => (
-  <MainLayout langKey={langKey}>
-    <div
-      className='eclipse-jkube__content'
-      dangerouslySetInnerHTML={{__html}}
-    />
-  </MainLayout>
-);
+  children,
+  pageContext: {locale}
+}) => {
+  return (
+    <MainLayout locale={locale}>
+      <div className='eclipse-jkube__content'>
+        {children}
+      </div>
+    </MainLayout>
+  );
+};
 
 export const Head = ({
   data: {
-    markdownRemark: {
+    mdx: {
       frontmatter: {title, description},
     }
   }
-}) => (
-  <Seo title={title} description={description}/>
-);
+}) => {
+  return (
+    <Seo title={title} description={description}/>
+  );
+};
 
 export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+  query($id: String!) {
+    mdx(id: {eq: $id}) {
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         path

@@ -5,20 +5,20 @@ import {Footer, Header} from './';
 import '../styles/main.scss';
 
 export const MainLayout = ({
-  langKey,
+  locale,
   children,
 }) => (
   <div className='eclipse-jkube'>
-    <Header lang={langKey}/>
+    <Header locale={locale}/>
     <div className='eclipse-jkube__main'>
       {children}
     </div>
-    <Footer lang={langKey}/>
+    <Footer locale={locale}/>
   </div>
 );
 
 
 MainLayout.propTypes = {
-  langKey: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired
 };

@@ -4,10 +4,10 @@ date: "2020-01-02"
 title: "Eclipse JKube - Build and Deploy java applications on Kubernetes"
 description: "Eclipse JKube - Build and Deploy java applications on Kubernetes"
 ---
-<div class="hero">
-<div class="hero-content">
+<div className="hero">
+<div className="hero-content">
 
-<div class="getting-involved">
+<div className="getting-involved">
 
 [![Twitter](https://img.shields.io/twitter/follow/jkubeio?label=Follow)](https://twitter.com/jkubeio)
 [![Twitter](https://img.shields.io/badge/YouTube-FF0000?logo=youtube&logoColor=white)](https://www.youtube.com/channel/UCpU2tjgpfkTVgeDq-DBSV7A)
@@ -36,7 +36,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
 
 ### Kubernetes Maven Plugin
 
-<div class="highlight">
+<div className="highlight">
 
 ![JKube - Kubernetes Maven Plugin](index/kubernetes-logo.svg "Kubernetes logo")
 
@@ -50,7 +50,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
 
 ### OpenShift Maven Plugin
 
-<div class="highlight">
+<div className="highlight">
 
 * Built on top of **Kubernetes Maven Plugin** provides OpenShift specific features.
 * Dealing with S2I images and hence inherits its flexible and powerful configuration.
@@ -66,7 +66,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
 
 ### JKube Kit
 
-<div class="highlight">
+<div className="highlight">
 
 ![JKube Kit](index/briefcase-icon.svg "Briefcase icon")
 
@@ -79,15 +79,17 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
 
 </div>
 
-<div class="section-dark">
+<div className="section-dark">
 
 ## Downloads
 
 You can get Eclipse JKube from these platforms:
 
+<span>
 [![Maven Central](https://img.shields.io/maven-central/v/org.eclipse.jkube/jkube.svg?label=Maven%20Central)
 ](https://search.maven.org/search?q=g:%22org.eclipse.jkube%22)
 [![Eclipse Download Repository](https://img.shields.io/badge/eclipse%20downloads-downloads.eclipse.org-red)
 ](https://download.eclipse.org/jkube/)
+</span>
 
 </div>

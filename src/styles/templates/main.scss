@@ -82,14 +82,12 @@
     & .highlight {
       display: flex;
       align-items: center;
-      > p {
-        margin: $default-spacing ($default-spacing * 2);
+      gap: ($default-spacing * 2);
+      img {
         display: none;
+        max-width: 100px;
         @media all and (min-width: $desktop-min-width){
           display:block;
-        }
-        img {
-          max-width: 100px;
         }
       }
       &-description {

@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'gatsby'
 import logo from '../assets/EF_WHT-OR_png.png';
 import jkubeLogo from '../assets/jkube-logo-horizontal-white.svg';
-import PropTypes from 'prop-types';
 import {resolveI18nPath} from "../i18n";
 
 const cClass = 'eclipse-jkube__header';
@@ -11,8 +11,8 @@ const TM = () => (
   <span className={`${cClass}-trade-mark`}>&trade;</span>
 );
 
-export const Header = ({lang}) => {
-  const resolvePath = resolveI18nPath(lang);
+export const Header = ({locale}) => {
+  const resolvePath = resolveI18nPath(locale);
   return (
     <header className={cClass}>
       <div className={`${cClass}-container`}>
@@ -45,5 +45,5 @@ export const Header = ({lang}) => {
 };
 
 Header.propTypes = {
-  lang: PropTypes.string.isRequired,
+  locale: PropTypes.string.isRequired,
 };

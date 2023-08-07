@@ -6,10 +6,10 @@ import '../../styles/main.scss';
 
 const title = 'Eclipse JKube Demonstrations';
 const description='Eclipse JKube plugin demonstrations for Kubernetes and OpenShift';
-const langKey='en';
+const locale='en-US';
 
 const Demos = () => (
-  <MainLayout langKey={langKey}>
+  <MainLayout locale={locale}>
     <div className='eclipse-jkube__content'>
       <div className="hero">
         <div className="hero-content">

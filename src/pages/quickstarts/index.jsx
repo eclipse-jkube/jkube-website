@@ -6,10 +6,10 @@ import '../../styles/main.scss';
 
 const title = 'Quickstarts';
 const description='Eclipse JKube Quickstarts and examples';
-const langKey='en';
+const locale='en-US';
 
 const Quickstarts = ({data: {allQuickstart: {nodes}}}) => (
-  <MainLayout langKey={langKey}>
+  <MainLayout locale={locale}>
     <div className='eclipse-jkube__content'>
       <div className='hero'>
         <div className='hero-content'>

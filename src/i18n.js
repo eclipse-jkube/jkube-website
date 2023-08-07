@@ -1,10 +1,14 @@
 
-const defaultLangKey = 'en';
+const defaultLocale = 'en-US';
 
-const resolveI18nPath = langKey => path =>
-  langKey === defaultLangKey ? path : `${langKey}/${path}`;
+const resolveI18nPath = locale => path => {
+  if (locale === defaultLocale) {
+    return path;
+  }
+  return `${locale.substring(0, locale.indexOf('-'))}/${path}`;
+};
 
 module.exports = {
-  defaultLangKey,
+  defaultLocale,
   resolveI18nPath
 };
