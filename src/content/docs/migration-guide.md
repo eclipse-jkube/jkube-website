@@ -4,13 +4,12 @@ date: "2020-02-24"
 title: "Eclipse JKube Migration Guide"
 description: "Eclipse JKube migration guide from Fabric8 Maven Plugin (FMP)"
 ---
-<div className="hero">
-<div className="hero-content">
+import {Hero} from '../../components'
 
+<Hero>
 # Documentation
-
-</div>
-</div>
+## Migration Guide
+</Hero>
 
 ## Migration Guide for projects using Fabric8 Maven Plugin to Eclipse JKube
 

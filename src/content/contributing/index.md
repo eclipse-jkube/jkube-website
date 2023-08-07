@@ -4,15 +4,13 @@ date: "2020-02-28"
 title: "Contributing to Eclipse JKube"
 description: "Eclipse JKube contributing main guidelines"
 ---
-<div className="hero">
-<div className="hero-content">
+import {Hero} from '../../components'
 
+<Hero>
 # Contributing guide
 
 Thanks for being interested in contributing to Eclipse JKube!
-
-</div>
-</div>
+</Hero>
 
 ## Want to contribute?
 

@@ -1,0 +1,24 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.eclipse-jkube__hero {
+  $hero-class: &;
+  @include full-width;
+  display: block;
+  background-color: darken($color-dark-background, 10%);
+  background-image: url('../../assets/cubes.jpg');
+  background-size: cover;
+  color: $color-dark-foreground;
+  #{$hero-class}-content {
+    padding: $default-spacing;
+    @media all and (min-width: $desktop-max-width) {
+      padding: $default-spacing calc((100% - #{$desktop-max-width})/2);
+    }
+    background-color: transparentize(darken($color-dark-background, 10%), 0.3);
+    h1 {
+      font-size: 2.5rem;
+      font-family: $base-font-family;
+      font-weight: $font-weight-light-bold;
+    }
+  }
+}
