@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby';
-import {MainLayout, QuickStartCard, Seo} from '../../components';
+import {Hero, MainLayout, QuickStartCard, Seo} from '../../components';
 
 import '../../styles/main.scss';
 
@@ -11,12 +11,10 @@ const locale='en-US';
 const Quickstarts = ({data: {allQuickstart: {nodes}}}) => (
   <MainLayout locale={locale}>
     <div className='eclipse-jkube__content'>
-      <div className='hero'>
-        <div className='hero-content'>
-          <h1>{title}</h1>
-          <p>{description}</p>
-        </div>
-      </div>
+      <Hero>
+        <h1>{title}</h1>
+        <p>{description}</p>
+      </Hero>
       <ul
         className='eclipse-jkube__quickstarts'
         itemScope itemType='http://schema.org/SoftwareApplication'
