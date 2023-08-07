@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin full-width() {
+  margin: 0px -#{$default-spacing} $default-spacing -#{$default-spacing};
+  @media all and (min-width: $desktop-max-width) {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw
+  }
+}

@@ -4,17 +4,15 @@ date: "2020-02-22"
 title: "Eclipse JKube Community"
 description: "Eclipse JKube Feedback and Community: Information about how to get involved in the project"
 ---
-<div className="hero">
-<div className="hero-content">
+import {Hero} from '../../components'
 
+<Hero>
 # Feedback and Community
 
 Do you have any questions or comments on Eclipse JKube?
 
 Do you want to get involved?
-
-</div>
-</div>
+</Hero>
 
 
 ## <i className="header__icon fas fa-life-ring"></i> Support

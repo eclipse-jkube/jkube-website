@@ -4,13 +4,11 @@ date: "2020-02-22"
 title: "Eclipse JKube Documentation"
 description: "Eclipse JKube Documentation Index"
 ---
-<div className="hero">
-<div className="hero-content">
+import {Hero} from '../../components'
 
+<Hero>
 # Documentation
-
-</div>
-</div>
+</Hero>
 
 ## Plugin Documentation
 

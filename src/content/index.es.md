@@ -4,8 +4,9 @@ date: "2020-01-02"
 title: "Eclipse JKube"
 description: "Página de bienvenida de JKube"
 ---
-<div className="hero">
-<div className="hero-content">
+import {Hero} from '../components'
+
+<Hero>
 
 <div className="getting-involved">
 
@@ -27,5 +28,4 @@ Provee una fuerte integración con Maven y se beneficia de las configuraciones d
 El proyecto se centra en dos tareas, construir imágenes de Docker y crear descriptores de recursos para Kubernetes
 y OpenShift.
 
-</div>
-</div>
+</Hero>

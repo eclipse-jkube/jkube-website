@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'gatsby'
+import {resolveI18nPath} from '../i18n';
 import logo from '../assets/EF_WHT-OR_png.png';
 import jkubeLogo from '../assets/jkube-logo-horizontal-white.svg';
-import {resolveI18nPath} from "../i18n";
 
 const cClass = 'eclipse-jkube__header';
 

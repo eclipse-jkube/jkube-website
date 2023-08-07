@@ -1,18 +1,7 @@
 @use "sass:math";
 
 @import '../base/variables';
-
-@mixin full-width() {
-  margin: 0px -#{$default-spacing} $default-spacing -#{$default-spacing};
-  @media all and (min-width: $desktop-max-width) {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw
-  }
-}
+@import '../base/mixins';
 
 .eclipse-jkube {
   display: flex;
@@ -37,33 +26,6 @@
     :not(pre) > code[class*="language-"], pre[class*="language-"] {
       background-color: transparent;
     }
-    .hero {
-      @include full-width;
-      display: block;
-      background-color: darken($color-dark-background, 10%);
-      background-image: url('../assets/cubes.jpg');
-      background-size: cover;
-      color: $color-dark-foreground;
-      & .hero-content {
-        padding: $default-spacing;
-        @media all and (min-width: $desktop-max-width) {
-          padding: $default-spacing calc((100% - #{$desktop-max-width})/2);
-        }
-        background-color: transparentize(darken($color-dark-background, 10%), 0.3);
-        .getting-involved {
-          color: $color-dark-foreground;
-          margin: 0 #{-$default-spacing};
-          padding: 0 $default-spacing;
-          display: flex;
-          justify-content: flex-end;
-        }
-        h1 {
-          font-size: 2.5rem;
-          font-family: $base-font-family;
-          font-weight: $font-weight-light-bold;
-        }
-      }
-    }
     .section-dark {
       @include full-width;
       background-color: $color-dark-background;
@@ -78,6 +40,13 @@
           padding: 0 calc((100% - #{$desktop-max-width})/2);
         }
       }
+    }
+    & .getting-involved {
+      color: $color-dark-foreground;
+      margin: 0 #{-$default-spacing};
+      padding: 0 $default-spacing;
+      display: flex;
+      justify-content: flex-end;
     }
     & .highlight {
       display: flex;
