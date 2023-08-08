@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Footer} from './footer';
 
 const icons = {
   ApacheCamel: 'cib-apache',
@@ -15,7 +14,7 @@ const icons = {
 };
 
 export const QuickStartCard = ({title, description, technologies, url}) => (
-  <div className='quick-start-card' itemScope itemType='http://schema.org/SoftwareSourceCode'>
+  <div className='quick-start-card' itemScope itemType='https://schema.org/SoftwareSourceCode'>
     <meta itemProp='programmingLanguage' content='Java'/>
     <meta itemProp='codeSampleType' content='full (compile ready) solution'/>
     <meta itemProp='keywords' content={technologies.join(',')} />
