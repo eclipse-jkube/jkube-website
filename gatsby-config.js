@@ -14,6 +14,7 @@ const config = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

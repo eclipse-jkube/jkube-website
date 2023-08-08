@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/components/youtube.scss';
+
 export const YouTube = ({
   videoId,
   start,
