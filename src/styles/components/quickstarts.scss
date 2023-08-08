@@ -1,5 +1,15 @@
 @import '../base/variables';
 
+.eclipse-jkube__quickstarts {
+  padding: 0;
+  &-item {
+    list-style: none;
+    &:not(:last-child) {
+      margin-bottom: $default-spacing;
+    }
+  }
+}
+
 .quick-start-card {
   $class: &;
   border: 1px solid $quickstart-card-border-color;
