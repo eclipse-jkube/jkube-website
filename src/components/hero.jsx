@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {StaticImage} from 'gatsby-plugin-image';
 
 import '../styles/components/hero.scss';
@@ -21,4 +22,11 @@ export const Hero = ({children}) => {
       </div>
     </div>
   );
+};
+
+Hero.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 };
