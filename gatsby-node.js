@@ -1,5 +1,6 @@
 const path = require('path');
 const {defaultLocale} = require('./src/i18n');
+const latestJKubeVersion = require('./src/jkube-utils').readLatestVersion().toString();
 
 const mainTemplate = path.resolve('src', 'templates', 'main.jsx');
 const docTemplate = path.resolve('src', 'templates', 'doc.jsx');
@@ -80,6 +81,7 @@ const createMarkdownPages = async ({createPage, graphql, reporter}) => {
       context: {
         id,
         locale,
+        latestJKubeVersion
       },
     });
   });

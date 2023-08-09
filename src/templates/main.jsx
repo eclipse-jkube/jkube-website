@@ -1,19 +1,33 @@
 import React from 'react';
 import {graphql} from 'gatsby';
-import {MainLayout, Seo} from '../components';
+import {MDXProvider} from '@mdx-js/react';
+import {Code, CodeBlock, MainLayout, Seo} from '../components';
 
 import '../styles/main.scss';
 
+const components = pageContext => ({
+  pre: ({className = '', ...props}) => {
+    if (props?.children?.type?.name === 'code') {
+      return <CodeBlock {...props} />;
+    }
+    return <pre className={className} {...props} />;
+  },
+  code: props => <Code pageContext={pageContext} {...props} />
+});
+
 const Main = ({
   children,
-  pageContext: {locale}
+  pageContext
 }) => {
+  const {locale} = pageContext;
   return (
-    <MainLayout locale={locale}>
-      <div className='eclipse-jkube__content'>
-        {children}
-      </div>
-    </MainLayout>
+    <MDXProvider components={components(pageContext)}>
+      <MainLayout locale={locale}>
+        <div className='eclipse-jkube__content'>
+          {children}
+        </div>
+      </MainLayout>
+    </MDXProvider>
   );
 };
 

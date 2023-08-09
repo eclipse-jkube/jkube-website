@@ -1,7 +1,12 @@
+export {Code, CodeBlock} from './code';
 export {Footer} from './footer';
+export {GettingStartedTab} from './getting-started-tab';
 export {Header} from './header';
 export {Hero} from './hero';
+export {GradleIcon, KubernetesIcon, MavenIcon, OpenShiftIcon} from './icons';
 export {MainLayout} from './main-layout';
 export {QuickStartCard, QuickStartList} from './quickstarts';
 export {Seo} from './seo';
+export {TabContainer, Tab} from './tabs';
+export {Tag} from './tag';
 export {YouTube} from './youtube';

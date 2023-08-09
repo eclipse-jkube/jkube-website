@@ -18,7 +18,7 @@ body {
 h1 {
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: $font-size-h1;
   font-weight: $font-weight-normal;
 }
 h2 {
@@ -26,7 +26,7 @@ h2 {
   align-items: center;
   margin-top: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  font-size: $font-size-h2;
   font-weight: $font-weight-normal;
   .header__icon {
     margin-right: 1rem;
@@ -35,7 +35,12 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: $font-size-h3;
+  font-weight: $font-weight-normal;
+}
+
+h4 {
+  font-size: $font-size-h4;
   font-weight: $font-weight-normal;
 }
 

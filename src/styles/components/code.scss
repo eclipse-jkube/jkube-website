@@ -1,0 +1,7 @@
+@import '../base/variables';
+
+$code-block-class: '.eclipse-jkube-code';
+
+code#{$code-block-class} {
+  display: inline-block;
+}
