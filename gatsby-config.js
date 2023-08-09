@@ -133,12 +133,6 @@ const config = {
             options: {
               target: '_blank',
             },
-          },
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              inlineCodeMarker: '÷',
-            },
           }
         ],
       }

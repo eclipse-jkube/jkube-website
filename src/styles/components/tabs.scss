@@ -1,0 +1,81 @@
+@import '../base/variables';
+
+.eclipse-jkube-tabs {
+  $tabs-class: &;
+  $responsive-breakpoint: 960px;
+  $tab-color: $base-color;
+  $tab-color-selected: $base-color;
+  $tab-color-hover: $color-dark-foreground;
+  $tab-gap: 0.2rem;
+  $tab-height: 2.5rem;
+  $tab-icon-height: $tab-height * 0.5;
+  $tab-font-size: $base-font-size;
+  $tab-font-weight: $font-weight-bold;
+  $background-color: transparentize(lighten($color-dark-background, 50%), 0.4);
+  $background-color-selected: lighten($color-orange, 10%);
+  $background-color-hover: transparentize(darken($color-dark-background, 40%), 0.75);
+  $border-radius: 0.3rem;
+  color: $color-dark-foreground;
+  #{$tabs-class}__tablist {
+    display: flex;
+    gap: $tab-gap;
+    #{$tabs-class}__tab {
+      display: inline-block;
+      background: $background-color;
+      color: $tab-color;
+      filter: grayscale(1);
+      padding: 0 0.8rem;
+      border: none;
+      border-radius: $border-radius $border-radius 0 0;
+      font-size: $tab-font-size;
+      font-weight: $tab-font-weight;
+      cursor: pointer;
+      &:hover {
+        color: $tab-color-hover;
+        background: $background-color-hover;
+        filter: none;
+      }
+      &--selected {
+        background: $background-color-selected;
+        color: $tab-color-selected;
+        filter: none;
+        &:hover {
+          background: $background-color-selected;
+          color: $tab-color-selected;
+        }
+      }
+      &-title {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        white-space: nowrap;
+        height: $tab-height;
+        line-height: $tab-height;
+        &--lg {
+          display: none;
+          @media all and (min-width: $responsive-breakpoint ) {
+            display: flex;
+          }
+        }
+        &--sm {
+          @media all and (min-width: $responsive-breakpoint ) {
+            display: none;
+          }
+        }
+        svg, img {
+          height: $tab-icon-height;
+        }
+      }
+    }
+  }
+  #{$tabs-class}__tabpanel {
+    position: relative;
+    background-color: $background-color-selected;
+    color: $color-dark-foreground;
+    border-radius: 0 $border-radius $border-radius $border-radius;
+    padding: 0.5rem;
+    &--hidden {
+      display: none;
+    }
+  }
+}
