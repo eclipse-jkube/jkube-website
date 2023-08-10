@@ -34,7 +34,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
        <GettingStartedTab
           id='kubernetes-maven-plugin'
           title={<><MavenIcon /> Maven &nbsp; <KubernetesIcon /> Kubernetes</>}
-          titleCompact={<><MavenIcon /> <KubernetesIcon /></>}
+          titleCompact={<><MavenIcon /><KubernetesIcon /></>}
           videoId='FHz5q8ERtPk'
        >
           <Tag color='#FFF' backgroundColor='#DD8623'>[🚀 Getting started](/docs/kubernetes-maven-plugin/#getting-started)</Tag>
@@ -63,7 +63,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
        <GettingStartedTab
           id='openshift-maven-plugin'
           title={<><MavenIcon /> Maven &nbsp; <OpenShiftIcon hideText={true} /> OpenShift</>}
-          titleCompact={<><MavenIcon /> <OpenShiftIcon hideText={true} /></>}
+          titleCompact={<><MavenIcon /><OpenShiftIcon hideText={true} /></>}
           videoId='ZJzfD-bDxpc'
        >
           <Tag color='#FFF' backgroundColor='#DD8623'>[🚀 Getting started](/docs/openshift-maven-plugin/#getting-started)</Tag>
@@ -91,7 +91,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
        <GettingStartedTab
           id='kubernetes-gradle-plugin'
           title={<><GradleIcon variant='light' /> Gradle &nbsp; <KubernetesIcon /> Kubernetes</>}
-          titleCompact={<><GradleIcon variant='light' /> <KubernetesIcon /></>}
+          titleCompact={<><GradleIcon variant='light' /><KubernetesIcon /></>}
           videoId='TUYl2Vw8bnQ'
        >
           <Tag color='#FFF' backgroundColor='#DD8623'>[🚀 Getting started](/docs/kubernetes-gradle-plugin/#getting-started)</Tag>
@@ -114,7 +114,7 @@ Eclipse JKube also provides a set of tools such as watch, debug, log, etc. to im
        <GettingStartedTab
           id='openshift-gradle-plugin'
           title={<><GradleIcon variant='light' /> Gradle &nbsp; <OpenShiftIcon hideText={true} /> OpenShift</>}
-          titleCompact={<><GradleIcon variant='light' /> <OpenShiftIcon hideText={true} /></>}
+          titleCompact={<><GradleIcon variant='light' /><OpenShiftIcon hideText={true} /></>}
           videoId='uMxEzLdqcik'
        >
           <Tag color='#FFF' backgroundColor='#DD8623'>[🚀 Getting started](/docs/openshift-gradle-plugin/#getting-started)</Tag>
