@@ -13,8 +13,15 @@ export const Hero = ({children}) => {
       </div>
       <div className={`${baseClass}__image`}>
         <StaticImage
+          src='../assets/cubes-vert.jpg'
+          className={`${baseClass}__image-wrapper-vertical`}
+          objectPosition='center top'
+          loading='eager'
+          alt='A picture of multiple concrete cubes aligned in a grid'
+        />
+        <StaticImage
           src='../assets/cubes.jpg'
-          className={`${baseClass}__image-wrapper`}
+          className={`${baseClass}__image-wrapper-landscape`}
           objectPosition='center top'
           loading='eager'
           alt='A picture of multiple concrete cubes aligned in a grid'

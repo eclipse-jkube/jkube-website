@@ -28,7 +28,20 @@
     z-index: -1;
     background-color: darken($color-dark-background, 10%);
     &-wrapper {
-      height: 100%;
+      &-vertical {
+        display: none;
+        height: 100%;
+        @media only screen and (max-width: $desktop-min-width) {
+          display: block;
+        }
+      }
+      &-landscape {
+        display: none;
+        height: 100%;
+        @media only screen and (min-width: $desktop-min-width + 1) {
+          display: block;
+        }
+      }
     }
   }
 }
