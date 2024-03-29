@@ -110,7 +110,7 @@ const createAsciiDocPages = async({createPage, graphql, reporter}) => {
     return;
   }
   result.data.allAsciidocCopy.edges.forEach(({ node }) => {
-    const slug = `/docs/${node.document.title.replace(/(.*\/)?/, '')}`;
+    const slug = `/docs/${node.document.title.replace(/(.*\/ ?)?/, '')}`;
     createPage({
       path: slug,
       component: docTemplate,
