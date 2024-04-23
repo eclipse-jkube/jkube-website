@@ -25,7 +25,7 @@ export const QuickStartList = () => {
       <meta itemProp='name' content='Eclipse JKube' />
       <meta itemProp='applicationCategory' content='Developer Tools' />
       <meta itemProp='operatingSystem' content='Linux,Windows,OSX,Mac' />
-      <meta itemProp='downloadUrl' content='https://github.com/eclipse/jkube' />
+      <meta itemProp='downloadUrl' content='https://github.com/eclipse-jkube/jkube' />
       {nodes.map(node => (
         <li key={node.artifactId} className='eclipse-jkube__quickstarts-item'>
           <QuickStartCard

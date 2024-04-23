@@ -37,4 +37,4 @@ xdg-open http://localhost:8000/jkube
 
 ## Documentation generation
 
-Documentation gets **statically** generated from https://github.com/eclipse/jkube asciidoc.
+Documentation gets **statically** generated from https://github.com/eclipse-jkube/jkube asciidoc.

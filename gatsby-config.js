@@ -27,7 +27,7 @@ const config = {
       resolve: 'gatsby-source-git',
       options: {
         name: 'jkube',
-        remote: 'https://github.com/eclipse/jkube.git',
+        remote: 'https://github.com/eclipse-jkube/jkube.git',
         branch: `v${latestJKubeVersion}`,
         patterns: [
           'kubernetes-maven-plugin/doc/**/index.adoc',
@@ -40,7 +40,7 @@ const config = {
       resolve: 'gatsby-source-git',
       options: {
         name: 'jkube-master',
-        remote: 'https://github.com/eclipse/jkube.git',
+        remote: 'https://github.com/eclipse-jkube/jkube.git',
         branch: `master`,
         patterns: [
           '!*'

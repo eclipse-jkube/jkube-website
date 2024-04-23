@@ -31,10 +31,10 @@ export const Header = ({locale}) => {
             <li>
               <a
                 className={`${cClass}-stars`}
-                href='https://github.com/eclipse/jkube' title='eclipse/jkube'
+                href='https://github.com/eclipse-jkube/jkube' title='eclipse-jkube/jkube'
                 target='_blank' rel='noopener'
               >
-                <img src='https://img.shields.io/github/stars/eclipse/jkube?style=social' alt='eclipse/jkube stargazers' />
+                <img src='https://img.shields.io/github/stars/eclipse-jkube/jkube?style=social' alt='eclipse-jkube/jkube stargazers' />
               </a>
             </li>
           </ul>
